@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { RegularText, TitleText } from "../../../../components/tipography"
 
 export const IntroContainer = styled.section`
   text-align: center;
@@ -12,7 +13,7 @@ export const IntroContainer = styled.section`
     content: "";
     width: 100%;
     height: 60.5rem;
-    background-color: ${({theme}) => theme["brand-greenlight"]};
+    background-color: ${({theme}) => theme.colors["brand-greenlight"]};
     display: block;
 
     position: absolute;
@@ -30,7 +31,7 @@ export const IntroContainer = styled.section`
 `
 
 export const ButtonContainer = styled.div`
-  color: ${({theme}) => theme.white};
+  color: ${({theme}) => theme.colors.white};
   font-size: 1.4rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -45,12 +46,12 @@ export const ButtonContainer = styled.div`
   margin-bottom: 6rem;
   padding: 1rem 3rem;
   width: fit-content;
-  background-color: ${({theme}) => theme["green-primary"]};
+  background-color: ${({theme}) => theme.colors["green-primary"]};
   border-radius: 4rem;
   transition: background 200ms;
 
   &:hover {
-    background-color: ${({theme}) => theme["green-primary-dark"]};
+    background-color: ${({theme}) => theme.colors["green-primary-dark"]};
   }
 `
 
@@ -58,31 +59,24 @@ export const Benefits = styled.div`
   grid-area: A;
   text-align: left;
   align-self: center; 
-
-  h4 {
-    font-size: 1.4rem;
-    color: ${({theme}) => theme["green-primary"]};;
-    margin-bottom: 1.6rem;
-    text-transform: uppercase;
-    line-height: 150%;
-    letter-spacing: 0.08rem;
-  }
-
-  h1 {  
-    font-size: 3.4rem;
-    color: ${({theme}) => theme.headline};;
-    line-height: 130%;
-    margin-bottom: 2.4rem;
-  }
 `
 
-export const Paragraph = styled.p`
-  color: ${({theme}) => theme.paragraph};
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 150%;
-  margin-bottom: 3.2rem;
-  
+export const BenefitsTitle = styled(TitleText)`
+  margin-bottom: 2.4rem;
+`
+
+export const BenefitsSubtitle = styled(TitleText)`
+  margin-bottom: 1.6rem;
+  text-transform: uppercase;
+`
+
+export const Paragraph = styled(RegularText)`
+  margin-bottom: 3.2rem; 
+`
+
+export const StatTitle = styled(TitleText)`
+  margin-top: 0;
+  margin-bottom: .4rem ;
 `
 
 export const Stats = styled.section`
@@ -93,8 +87,8 @@ export const Stats = styled.section`
   margin-inline: auto; 
   margin-bottom: 10rem;
   
-  background-color: ${props => props.theme['brand-beige']};
-  border: 1px solid ${props => props.theme['brand-greenlight']};
+  background-color: ${({theme}) => theme.colors['brand-beige']};
+  border: 1px solid ${({theme}) => theme.colors['brand-greenlight']};
 
   box-sizing: border-box;
   display: flex;
@@ -114,23 +108,9 @@ export const Stats = styled.section`
 
 export const Stat = styled.div`
   width: 50rem;
-  h3 {  
-    font-size: 3rem;
-    color: ${props => props.theme['bg-dark']}; 
-    line-height: 130%;
-
-    margin-top: 0;
-    margin-bottom: .4rem ;
-  }
-
-  p {  
-    color: ${props => props.theme['paragraph']}; 
-    line-height: 150% ;
-    font-size: 1.6rem;
-  }
 
   &:not(:nth-child(1)) {
     padding-left: 3rem;
-    border-left: 1px solid ${({theme}) => theme["green-primary"]};;
+    border-left: 1px solid ${({theme}) => theme.colors["green-primary"]};
   }
 `

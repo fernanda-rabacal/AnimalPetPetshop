@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { RegularText, TitleText } from "../../components/tipography";
 
 export const AboutContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 10rem;
 `
 
 export const AboutContent = styled.div`
@@ -18,31 +19,21 @@ export const AboutContent = styled.div`
   }
 `
 
-export const History = styled.div`
-  h4 {
-    margin-bottom: 0;
-    font-size: 1.6rem;
-    color: ${({ theme }) => theme['green-primary']};
-    text-transform: uppercase;
-    line-height: 150%;
-    letter-spacing: 0.08rem;
-  }
 
-  h2 {
-    margin-top: 0;
-    font-size: 3rem;
-    line-height:3.9rem;
-    color: ${({theme}) => theme.headline };
-  }
+export const AboutTitle = styled(TitleText)`
+  margin-bottom: 0; 
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+`
 
-  p {  
-    margin-top: 2rem;
-    margin-bottom: 5rem;
-    color: ${({theme}) => theme.paragraph };;
-    font-weight: 400;
-    font-size: 1.8rem;
-    line-height: 150%;
-  }
+export const AboutSubtitle = styled(TitleText)`
+  margin-top: 0;
+  line-height: 3.9rem;
+  margin-bottom: 5rem;
+`
+
+export const HistoryText = styled(RegularText)`
+  margin-top: 2rem;
 `
 
 export const Testimonials = styled.div`
@@ -65,9 +56,9 @@ export const Card = styled.div`
   padding: 2.4rem;
   text-align: left;
   font-size: 2rem;
-  border: 1px solid ${({theme}) => theme["brand-greenlight"]};
+  border: 1px solid ${({theme}) => theme.colors["brand-greenlight"]};
   border-radius: .6rem;
-  background: ${({theme}) => theme["white"]};
+  background: ${({theme}) => theme.colors["white"]};
 
   p {
     font-size: 1.8rem;
@@ -78,7 +69,7 @@ export const Card = styled.div`
     display: flex;
     align-items: center;
     gap: 1rem;
-    color:${({theme}) => theme.paragraph};
+    color:${({theme}) => theme.colors["paragraph"]};
   }
 
   img {

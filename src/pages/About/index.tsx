@@ -1,26 +1,26 @@
 import VetFoto from '../../assets/vaterinaria-com-cachorrinho.png'
 import Quote from '../../assets/quote-marks.svg'
-import { AboutContainer, AboutContent, Card, Cards, History, Testimonials } from './styles'
+import { AboutContainer, AboutContent, AboutSubtitle, AboutTitle, Card, Cards, HistoryText, Testimonials } from './styles'
 
 
 export function About(){
   return(
     <AboutContainer className="container">
       <AboutContent>
-        <History>
-          <h4>SOBRE NÓS</h4>
-          <h2>Nossa História</h2>
-          <p>
-          Nossa história começa em 2016, com apenas uma sala pequena e um espaço de tosa. Apesar das dificuldades iniciais, aos poucos nossa loja foi tomando forma, contratamos mais e mais funcionários, ampliamos o espaço, construímos o consultório veterinário e reformamos o espaço de tosa. Hoje contamos com 3 veterinários, 3 profissionais de banho e tosa, alem de um espaço quase 3 vezes maior do que o inicial. Aumentamos também a variedade de produtos vendidos, desde acessórios, produtos higiênicos, medicamentos, rações, petiscos, camas e muito mais. Mas não paramos por aqui, estamos sempre trabalhando para traer o maior conforto para nossos clientes e pretendemos aumentar mais ainda nossa marca!
-          </p>
-        </History>
+        <div>
+          <AboutTitle color="green-primary">SOBRE NÓS</AboutTitle>
+          <AboutSubtitle size="l">Nossa História</AboutSubtitle>
+          <HistoryText>
+            Nossa história começa em 2016, com apenas uma sala pequena e um espaço de tosa. Apesar das dificuldades iniciais, aos poucos nossa loja foi tomando forma, contratamos mais e mais funcionários, ampliamos o espaço, construímos o consultório veterinário e reformamos o espaço de tosa. Hoje contamos com 3 veterinários, 3 profissionais de banho e tosa, alem de um espaço quase 3 vezes maior do que o inicial. Aumentamos também a variedade de produtos vendidos, desde acessórios, produtos higiênicos, medicamentos, rações, petiscos, camas e muito mais. Mas não paramos por aqui, estamos sempre trabalhando para traer o maior conforto para nossos clientes e pretendemos aumentar mais ainda nossa marca!
+          </HistoryText>
+        </div>
         
         <img src={VetFoto} alt='medica veterinaria com o rosto junto ao rosto de um cachorro'/>
       </ AboutContent>
       
         <Testimonials>
-          <h4>Depoimentos</h4>
-          <h2>Opiniões de nossos clientes</h2>
+          <AboutTitle color="green-primary" as="h4">Depoimentos</AboutTitle>
+          <AboutSubtitle size="l" as="h2">Opiniões de nossos clientes</AboutSubtitle>
 
           <Cards>
             <Card>

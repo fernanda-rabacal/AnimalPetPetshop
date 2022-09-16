@@ -8,10 +8,10 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   align-items: center;
 
-  background-color: ${({theme}) => theme["green-primary"]};
+  background-color: ${({theme}) => theme.colors["green-primary"]};
 
   h1 {
-    color: ${({theme}) => theme["white"]};
+    color: ${({theme}) => theme.colors["white"]};
     font-size: 3rem;
   }
 `
@@ -23,14 +23,14 @@ export const PagesNavigators = styled.div`
   gap: 3rem;
   
   p {
-    color: ${({theme}) => theme["white"]};
+    color: ${({theme}) => theme.colors["white"]};
     font-size: 2.2rem;
   }
 `
 
 export const SocialLinks = styled.div`
   svg {
-    color: ${({theme}) => theme["white"]};
+    color: ${({theme}) => theme.colors["white"]};
   }
   display: flex;
   gap: 1rem

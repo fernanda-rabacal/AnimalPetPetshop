@@ -7,6 +7,6 @@ export const FooterContainer = styled.footer`
   align-items: center;
   justify-content: center;
   height: 10vh;
-  background-color: ${({theme}) => theme["green-primary"]};
+  background-color: ${({theme}) => theme.colors["green-primary"]};
   width: 100%;
 `
