@@ -6,14 +6,17 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .container {  
+    margin-block: 5rem;
     width: min(50rem, 100%);
     padding-inline: 2.4rem;
     box-sizing: border-box;
     margin-inline: auto;
 
-    @media(min-width: 1024px){
-      .container {
-        width: min(112rem, 100%);
+  }
+  
+  @media(min-width: 1024px){
+    .container {
+      width: min(112rem, 100%);
     }
   }
 

@@ -1,4 +1,5 @@
 import { ButtonHTMLAttributes, ReactNode } from "react";
+import { ButtonComponent } from "./styles";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
   btnValue: string | ReactNode
@@ -6,8 +7,11 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
 
 export function Button(props: ButtonProps){
   return(
-    <button onClick={props.onClick} className={props.className}>
+    <ButtonComponent 
+      onClick={props.onClick} 
+      className={props.className}
+    >
       {props.btnValue}
-    </button>
+    </ButtonComponent>
   )
 }
