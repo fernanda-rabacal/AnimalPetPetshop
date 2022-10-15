@@ -24,6 +24,15 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
   * {
     font-size: 1.6rem;
     box-sizing: border-box;
