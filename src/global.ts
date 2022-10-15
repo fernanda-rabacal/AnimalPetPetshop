@@ -5,6 +5,10 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 62.5%; 
   }
 
+  body {
+    background-color: ${({theme}) => theme.colors["brand-beige"]};
+  }
+
   .container {  
     margin-block: 5rem;
     width: min(50rem, 100%);
@@ -13,8 +17,8 @@ export const GlobalStyle = createGlobalStyle`
     margin-inline: auto;
 
   }
-  
-  @media(min-width: 1024px){
+
+  @media(min-width: 700px){
     .container {
       width: min(112rem, 100%);
     }

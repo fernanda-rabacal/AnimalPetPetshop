@@ -18,8 +18,8 @@ export function Header(){
         <NavLink to="/login">
           <p>Login</p>
         </NavLink>
-        <NavLink to="/register">
-          <p>Cadastro</p>
+        <NavLink to="/our-products">
+          <p>Produtos</p>
         </NavLink>
       </PagesNavigators>
 

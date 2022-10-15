@@ -1,6 +1,7 @@
 import VetFoto from '../../assets/vaterinaria-com-cachorrinho.png'
 import Quote from '../../assets/quote-marks.svg'
-import { AboutContainer, AboutContent, AboutSubtitle, AboutTitle, Card, Cards, HistoryText, Testimonials } from './styles'
+import { AboutContainer, AboutContent, Card, Cards, HistoryText, Testimonials } from './styles'
+import { FormerSubtitle, FormerTitle } from '../../components/tipography'
 
 
 export function About(){
@@ -8,8 +9,8 @@ export function About(){
     <AboutContainer className="container">
       <AboutContent>
         <div>
-          <AboutTitle color="green-primary">SOBRE NÓS</AboutTitle>
-          <AboutSubtitle size="l">Nossa História</AboutSubtitle>
+          <FormerTitle color="green-primary">SOBRE NÓS</FormerTitle>
+          <FormerSubtitle size="l">Nossa História</FormerSubtitle>
           <HistoryText>
             Nossa história começa em 2016, com apenas uma sala pequena e um espaço de tosa. Apesar das dificuldades iniciais, aos poucos nossa loja foi tomando forma, contratamos mais e mais funcionários, ampliamos o espaço, construímos o consultório veterinário e reformamos o espaço de tosa. Hoje contamos com 3 veterinários, 3 profissionais de banho e tosa, alem de um espaço quase 3 vezes maior do que o inicial. Aumentamos também a variedade de produtos vendidos, desde acessórios, produtos higiênicos, medicamentos, rações, petiscos, camas e muito mais. Mas não paramos por aqui, estamos sempre trabalhando para traer o maior conforto para nossos clientes e pretendemos aumentar mais ainda nossa marca!
           </HistoryText>
@@ -19,8 +20,8 @@ export function About(){
       </ AboutContent>
       
         <Testimonials>
-          <AboutTitle color="green-primary" as="h4">Depoimentos</AboutTitle>
-          <AboutSubtitle size="l" as="h2">Opiniões de nossos clientes</AboutSubtitle>
+          <FormerTitle color="green-primary" as="h4">Depoimentos</FormerTitle>
+          <FormerSubtitle size="l" as="h2">Opiniões de nossos clientes</FormerSubtitle>
 
           <Cards>
             <Card>

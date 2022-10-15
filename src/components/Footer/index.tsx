@@ -1,9 +1,11 @@
 import { FooterContainer } from "./styles"
 
 export function Footer(){
+  const currentYear = new Date().getFullYear();
+
   return(
     <FooterContainer>
-      <p>Todos os direitos reservados</p>
+      <p> © Animal Pet, {currentYear}. Todos os direitos reservados</p>
     </FooterContainer>
   )
 }

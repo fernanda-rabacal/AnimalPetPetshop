@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { RegularText, TitleText } from "../../components/tipography";
+import { RegularText } from "../../components/tipography";
 
 export const AboutContainer = styled.div`
   display: flex;
@@ -9,6 +9,7 @@ export const AboutContainer = styled.div`
 
 export const AboutContent = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: 5rem;
@@ -17,19 +18,10 @@ export const AboutContent = styled.div`
     border-radius: 18px;
     height: 46rem;
   }
-`
 
-
-export const AboutTitle = styled(TitleText)`
-  margin-bottom: 0; 
-  text-transform: uppercase;
-  letter-spacing: 0.08rem;
-`
-
-export const AboutSubtitle = styled(TitleText)`
-  margin-top: 0;
-  line-height: 3.9rem;
-  margin-bottom: 5rem;
+  @media(min-width: 1024px) {
+    flex-direction: row;
+  }
 `
 
 export const HistoryText = styled(RegularText)`
@@ -44,9 +36,14 @@ export const Testimonials = styled.div`
 
 export const Cards = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 4rem;
+
+  @media(min-width: 1024px) {
+    flex-direction: row;
+  }
 `
 
 export const Card = styled.div`
