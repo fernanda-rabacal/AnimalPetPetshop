@@ -141,7 +141,7 @@ export const Stat = styled.div`
     &:not(:nth-child(1)) {
       padding-left: 3rem;
       border-left: 1px solid ${({theme}) => theme.colors["green-primary"]};
-      padding-top: none;
+      padding-top: 0;
       border-top: none;
     }
   }
