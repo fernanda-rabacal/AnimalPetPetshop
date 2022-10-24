@@ -5,12 +5,12 @@ import { QuantityInput } from "../../components/QuantityInput";
 import { FormerSubtitle, FormerTitle, RegularText, TitleText } from "../../components/tipography";
 import { formatMoney } from "../../utils/formatMoney";
 import { AddCartWrapper, CardFooter, Carrousel, Image, Info, Item, OurProductsContainer, ScrollLeft, ScrollRight } from "./styles";
+import { petFoods } from "../../data/products/petFoods"; 
 
 export function OurProducts(){
-  const [ data, setData ] = useState([]);
   const carrousel = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
+  /* useEffect(() => {
     fetch("http://127.0.0.1:5173/products/petFoods.json", {
       mode: "no-cors",
       method: 'GET',
@@ -23,7 +23,7 @@ export function OurProducts(){
     })
     .then(response => response.json())
     .then(setData)
-  }, [])
+  }, []) */
 
   const handleLeftClick = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -64,7 +64,7 @@ export function OurProducts(){
           </ScrollLeft>
         <Carrousel ref={carrousel}>
 
-          {data.map((item) => {
+          {petFoods.map((item) => {
             const {id, name, price, image } = item;
             const formattedPrice = formatMoney(price);
 

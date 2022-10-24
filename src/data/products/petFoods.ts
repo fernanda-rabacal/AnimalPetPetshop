@@ -1,4 +1,4 @@
-[
+export const petFoods = [
   {
     "id": "94313731",
     "name": "Ração Golden Special para Cães Adultos Sabor Frango e Carne" ,
