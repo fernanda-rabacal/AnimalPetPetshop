@@ -41,8 +41,6 @@ export function OurProducts(){
     }
   }
 
-  if(!data || !data.length) return null
-
   return(
     <OurProductsContainer className="container">
       <FormerTitle color="green-primary">
