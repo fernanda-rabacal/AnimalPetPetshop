@@ -3,7 +3,7 @@ import { DefaultLayout } from "../layouts/DefaultLayout"
 import { About } from "../pages/About"
 import { Error } from "../pages/Error"
 import { Home } from "../pages/Home"
-import { Login } from "../pages/Login"
+import { Login } from "../pages/CompleteOrder"
 import { OurProducts } from "../pages/OurProducts"
 
 export function Router(){

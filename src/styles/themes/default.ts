@@ -10,6 +10,7 @@ export const defaultTheme = {
     'bg-light': '#f0fef8', 
     'brand-greenlight': '#c9fddf',
     'bg-dark': '#00471e', 
+    "base-button": "#E6E5E5",
 },
   textSizes : {
     "title-s": "3rem",

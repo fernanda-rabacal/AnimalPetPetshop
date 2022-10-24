@@ -1,11 +1,10 @@
 import { ShoppingCart } from "phosphor-react";
-import { useEffect, useState, useRef, MouseEvent  } from "react";
+import { useRef, MouseEvent  } from "react";
 import Chevron from "../../assets/right_chevron.png"
-import { QuantityInput } from "../../components/QuantityInput";
-import { FormerSubtitle, FormerTitle, RegularText, TitleText } from "../../components/tipography";
-import { formatMoney } from "../../utils/formatMoney";
-import { AddCartWrapper, CardFooter, Carrousel, Image, Info, Item, OurProductsContainer, ScrollLeft, ScrollRight } from "./styles";
+import { FormerSubtitle, FormerTitle, TitleText } from "../../components/tipography";
+import { Carrousel, OurProductsContainer, ScrollLeft, ScrollRight } from "./styles";
 import { petFoods } from "../../data/products/petFoods"; 
+import { ProductCard } from "./components/ProductCard";
 
 export function OurProducts(){
   const carrousel = useRef<HTMLDivElement | null>(null);
@@ -62,35 +61,12 @@ export function OurProducts(){
           </ScrollLeft>
         <Carrousel ref={carrousel}>
 
-          {petFoods.map((item) => {
-            const {id, name, price, image } = item;
-            const formattedPrice = formatMoney(price);
-
+          {petFoods.map((product) => {
             return (
-              <Item key={id}>
-                <Image>
-                  <img src={image} alt={name} />
-                </Image>
-
-                <Info>
-                  <span className="name">{name}</span>
-                  <CardFooter>
-                    <div>
-                      
-                      <TitleText size="m" color="headline" as="strong">
-                        R$ {formattedPrice}
-                      </TitleText>
-                    </div>
-
-                    <AddCartWrapper>
-                      <QuantityInput />
-                      <button>
-                        <ShoppingCart weight="fill" size={20} color="#fff"/>
-                      </button>
-                    </AddCartWrapper>
-                  </CardFooter>
-                </Info>
-              </Item>
+              <ProductCard 
+                key={product.id}
+                product={product} 
+                />
             )})}
 
         </Carrousel>

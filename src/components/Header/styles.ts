@@ -43,18 +43,51 @@ export const PagesNavigators = styled.div`
     }
   }
 `
+export const HeaderButtonsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+`;
 
-export const SocialLinks = styled.div`
+export const CartWrapper = styled.div`
+  box-sizing: border-box;
+  color: ${({theme}) => theme.colors.white};
+  background-color: ${({theme}) => theme.colors["green-primary-dark"]};
+  padding: 0.5rem;
+  border-radius: 6px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 1.125rem;
+  
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   svg {
     color: ${({theme}) => theme.colors["white"]};
-    width: 2rem;
+    width: 1.6rem;
+    height: 1.6rem;
   }
-  display: flex;
-  gap: 1rem;
 
   @media(min-width: 700px) {
+    font-size: 1.6rem;
     svg {
-      width: 3rem;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  @media(min-width: 1024px) {
+    font-size: 1.8rem;
+    svg {
+      width: 2rem;
+      height: 2rem;
     }
   }
 `

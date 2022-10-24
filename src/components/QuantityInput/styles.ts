@@ -6,12 +6,13 @@ export interface QuantityInputContainerProps {
 
 export const QuantityInputContainer = styled.div<QuantityInputContainerProps>`
   flex: 1;
-  background: ${({ theme }) => theme.colors.white};
+  background: ${({ theme }) => theme.colors["base-button"]};
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 4px;
   border-radius: 6px;
+
   input {
     text-align: center;
     width: 100%;

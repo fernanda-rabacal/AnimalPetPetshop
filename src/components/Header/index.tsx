@@ -1,6 +1,6 @@
+import { MapPin, ShoppingCart } from "phosphor-react"
 import { NavLink } from "react-router-dom"
-import { FacebookLogo, InstagramLogo, WhatsappLogo } from "phosphor-react"
-import { HeaderContainer, PagesNavigators, SocialLinks } from "./styles"
+import { CartWrapper, HeaderButtonsContainer, HeaderContainer, PagesNavigators } from "./styles"
 
 
 export function Header(){
@@ -15,28 +15,23 @@ export function Header(){
         <NavLink to="/about">
           <p>Sobre</p>
         </NavLink>
-        <NavLink to="/login">
-          <p>Login</p>
-        </NavLink>
         <NavLink to="/our-products">
           <p>Produtos</p>
         </NavLink>
       </PagesNavigators>
 
-        <SocialLinks>
-          <a rel='noreferrer' target="_blank" 
-            href="https://www.instagram.com/animalpetsalvador">
-            <InstagramLogo size={32}/>
-            </a>
-          <a rel='noreferrer' target="_blank" 
-            href="https://www.facebook.com/animalpetsalvador">
-              <FacebookLogo size={32}/>
-            </a>
-          <a rel='noreferrer' target="_blank" 
-            href="https://wa.me/5571993172074" >
-              <WhatsappLogo size={32}/>
-            </a>
-        </SocialLinks>
+      <HeaderButtonsContainer>
+        <CartWrapper>
+          <MapPin size={20} weight="fill" />
+            Salvador, BA
+        </CartWrapper>
+        <CartWrapper>
+          <NavLink to="/complete-order">
+          <ShoppingCart size={32} weight="fill" />
+          </NavLink>
+        </CartWrapper>
+
+      </HeaderButtonsContainer>
     </HeaderContainer>
   )
 }
