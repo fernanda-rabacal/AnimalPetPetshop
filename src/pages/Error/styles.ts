@@ -10,7 +10,7 @@ export const ErrorPageContainer = styled.div`
   h1 {  
     font-size: 25rem;
     margin: 0;
-    color: ${({theme}) => theme["green-primary"]};
+    color: ${({theme}) => theme.colors["green-primary"]};
   }
 
   h4 {  
@@ -19,7 +19,7 @@ export const ErrorPageContainer = styled.div`
   }
 
   p {  
-    color: ${({theme}) => theme["paragraph"]};
+    color: ${({theme}) => theme.colors["paragraph"]};
     font-size: 3rem;
     letter-spacing: 2px;
   }
