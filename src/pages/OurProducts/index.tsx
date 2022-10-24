@@ -11,7 +11,14 @@ export function OurProducts(){
   const carrousel = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5173/products/petFoods.json")
+    fetch("http://127.0.0.1:5173/products/petFoods.json", {
+      mode: "no-cors",
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        "Access-Control-Allow-Origin": "*"
+      }
+    })
     .then(response => response.json())
     .then(setData)
   }, [])
