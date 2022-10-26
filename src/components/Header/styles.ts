@@ -62,6 +62,22 @@ export const CartWrapper = styled.div`
   justify-content: center;
   gap: 0.75rem;
   font-size: 1.125rem;
+
+  span {
+    position: absolute;
+    width: 1.45rem;
+    height: 1.45rem;
+    border-radius: 50%;
+    top: calc(-1.35rem / 2);
+    right: calc(-1.35rem / 2);
+    color: ${({ theme }) => theme.colors.white};
+    background: ${({ theme }) => theme.colors["green-primary-dark"]};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
   
   a {
     display: flex;

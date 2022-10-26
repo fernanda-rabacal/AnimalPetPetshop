@@ -1,9 +1,13 @@
 import { MapPin, ShoppingCart } from "phosphor-react"
+import { useContext } from "react"
 import { NavLink } from "react-router-dom"
+import { CartContext } from "../../contexts/CartContext"
 import { CartWrapper, HeaderButtonsContainer, HeaderContainer, PagesNavigators } from "./styles"
 
 
 export function Header(){
+  const { cartQuantity } = useContext(CartContext)
+
   return(
     <HeaderContainer>
       <h1>AnimalPet</h1>
@@ -26,6 +30,7 @@ export function Header(){
             Salvador, BA
         </CartWrapper>
         <CartWrapper>
+        {cartQuantity >= 1 && <span>{cartQuantity}</span>}
           <NavLink to="/complete-order">
           <ShoppingCart size={32} weight="fill" />
           </NavLink>
