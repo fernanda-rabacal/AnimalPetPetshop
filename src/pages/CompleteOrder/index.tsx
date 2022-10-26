@@ -1,6 +1,6 @@
 import { useTheme } from "styled-components";
 import { CompleteOrderForm } from "./components/CompleteOrderForm";
-import { SelectedCoffees } from "./components/SelectedCoffees";
+import { SelectedCoffees } from "./components/SelectedProducts";
 import { CompleteOrderContainer } from "./styles";
 
 export function CompleteOrderPage(){

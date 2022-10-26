@@ -8,9 +8,9 @@ export const CompleteOrderContainer = styled.div`
   gap: 2rem;
   padding-inline: 1rem;
 
-  @media(min-width: 1024px) {
+  @media(min-width: 1244px) {
     flex-direction: row;
-    gap: 5rem;
+    gap: 4rem;
   }
 `
 

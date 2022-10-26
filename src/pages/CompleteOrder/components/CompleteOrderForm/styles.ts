@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { SectionBaseStyle } from "../../styles";
 
 export const CompleteOrderFormContainer = styled.div`
-  width: 58rem;
+  width: 60rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
