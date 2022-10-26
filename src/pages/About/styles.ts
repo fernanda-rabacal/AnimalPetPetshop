@@ -19,13 +19,15 @@ export const AboutContent = styled.div`
     height: 46rem;
   }
 
-  @media(min-width: 1024px) {
+  @media(min-width: 700px) {
     flex-direction: row;
+    margin-inline: auto;
   }
 `
 
 export const HistoryText = styled(RegularText)`
   margin-top: 2rem;
+  max-width: 50rem;
 `
 
 export const Testimonials = styled.div`
@@ -50,7 +52,10 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex: 1;
   padding: 2.4rem;
+  max-width: 35rem;
+  min-height: 35rem;
   text-align: left;
   font-size: 2rem;
   border: 1px solid ${({theme}) => theme.colors["brand-greenlight"]};
@@ -79,5 +84,4 @@ export const Card = styled.div`
     object-fit: cover;
     border-radius: 3rem;
   }
-
 `
