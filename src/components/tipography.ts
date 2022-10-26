@@ -23,14 +23,12 @@ export const RegularText = styled.p<RegularTextProps>`
   color: ${({theme, color}) => theme.colors[`${color ?? "paragraph"}`]};
   font-size: ${({theme, size}) => theme.textSizes[`text-regular-${size ?? "m"}`]};
   line-height: 130%;
-  letter-spacing: 0.05rem;
   font-weight: ${({weight}) => weight ?? "400" };
 `
 
 export const FormerTitle = styled(TitleText)`
   margin-bottom: 0; 
   text-transform: uppercase;
-  letter-spacing: 0.08rem;
 `
 export const FormerSubtitle = styled(TitleText)`
   margin-top: 0;

@@ -22,6 +22,9 @@ export function Header(){
         <NavLink to="/our-products">
           <p>Produtos</p>
         </NavLink>
+        <NavLink to="/services">
+          <p>Serviços</p>
+        </NavLink>
       </PagesNavigators>
 
       <HeaderButtonsContainer>

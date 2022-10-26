@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const CompleteOrderContainer = styled.div`
-  width: 100%;
   margin-top: 2.5rem;
   display: flex;
   flex-direction: column;
@@ -11,6 +10,7 @@ export const CompleteOrderContainer = styled.div`
 
   @media(min-width: 1024px) {
     flex-direction: row;
+    gap: 5rem;
   }
 `
 
@@ -18,5 +18,5 @@ export const SectionBaseStyle = styled.div`
   width: 100%;
   background: ${({ theme }) => theme.colors["base-card"]};
   border-radius: 6px;
-  padding: 2.5rem;
+  padding: 3.5rem;
 `;

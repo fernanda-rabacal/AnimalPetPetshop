@@ -97,6 +97,13 @@ export const CartWrapper = styled.div`
       width: 2rem;
       height: 2rem;
     }
+
+    span {  
+      width: 1.85rem;
+      height: 1.85rem;
+      top: calc(-1.85rem / 2);
+      right: calc(-1.85rem / 2);
+    }
   }
 
   @media(min-width: 1024px) {

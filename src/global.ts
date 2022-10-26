@@ -10,8 +10,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .container {  
-    margin-block: 5rem;
-    width: min(50rem, 100%);
+    margin-block: 4rem;
+    width: min(60rem, 100%);
     padding-inline: 1.4rem;
     box-sizing: border-box;
     margin-inline: auto;
