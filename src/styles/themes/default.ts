@@ -9,7 +9,8 @@ export const defaultTheme = {
     'green-primary-dark': "#00471e",
     'bg-light': '#f0fef8', 
     'brand-greenlight': '#c9fddf',
-    'bg-dark': '#00471e', 
+    'bg-dark': '#00471e',
+    "base-blue" : '#0006C1', 
     "base-button": "#E6E5E5",
     "base-background": "#FAFAFA",
     "base-card": "#F3F2F2",
@@ -28,5 +29,6 @@ export const defaultTheme = {
     "text-regular-m": "1.4rem",
     "text-regular-l": "1.8rem",
     "text-regular-xl": "2rem",
+    "components-button-g": "1.875rem",
   }
 }

@@ -49,15 +49,5 @@ export const PaymentMethodOptionsContainer = styled.div`
     grid-column: span 3;
     color: ${({ theme }) => theme.colors["base-error"]};
   }
-
-  div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    border: 1px solid ${({theme}) => theme.colors["green-primary"]};
-    border-radius: 4px;
-    height: 6rem;
-  }
 `;
 

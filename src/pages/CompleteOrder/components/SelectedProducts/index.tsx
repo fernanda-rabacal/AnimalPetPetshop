@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { TitleText } from "../../../../components/tipography";
 import { CartContext } from "../../../../contexts/CartContext";
 import { ProductCartCard } from "../ProductCartCard";
+import { ConfirmationSection } from "./ConfirmationSection";
 import { DetailsContainer, SelectedCoffeesContainer } from "./styles";
 
 export function SelectedCoffees() {
@@ -21,6 +22,7 @@ export function SelectedCoffees() {
           />
         })}
 
+        <ConfirmationSection />
       </DetailsContainer>
     </SelectedCoffeesContainer>
   );

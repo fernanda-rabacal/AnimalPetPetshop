@@ -5,6 +5,7 @@ import { Error } from "../pages/Error"
 import { Home } from "../pages/Home"
 import { OurProducts } from "../pages/OurProducts"
 import { CompleteOrderPage } from "../pages/CompleteOrder"
+import { OrderConfirmedPage } from "../pages/OrderConfirmed"
 
 export function Router(){
   return (
@@ -16,6 +17,7 @@ export function Router(){
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/our-products" element={<OurProducts />} />
+        <Route path="/order-confirmed" element={<OrderConfirmedPage />} />
       </Route>
     </Routes>
   )

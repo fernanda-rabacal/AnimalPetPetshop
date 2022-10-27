@@ -15,3 +15,15 @@ export const DetailsContainer = styled(SectionBaseStyle)`
   flex-direction: column;
   max-height: 70rem;
 `;
+
+export const ConfirmationSectionContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+`

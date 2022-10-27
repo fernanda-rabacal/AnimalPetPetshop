@@ -14,6 +14,7 @@ export interface CartItem extends Product {
 interface CartContextType {
   cartItems: CartItem[];
   cartQuantity: number;
+  cartItemsTotal: number;
   addItemToCart: (item: CartItem) => void;
   removeCartItem: (item: CartItem) => void;
   changeProductCartQuantity: (item: CartItem, type: "increase" | "decrease") => void
@@ -32,6 +33,9 @@ export function CartContextProvider({children} : CartContextProps){
     return [];
   })
   const cartQuantity = cartItems.length
+  const cartItemsTotal = cartItems.reduce((total, cartItem) => {
+    return total + cartItem.price * cartItem.quantity;
+  }, 0);
 
   function addItemToCart(item: CartItem){
     const itemAlreadyExistsInCart = cartItems.findIndex(cartItem => cartItem.id === item.id);
@@ -80,6 +84,7 @@ export function CartContextProvider({children} : CartContextProps){
       cartItems,
       addItemToCart,
       cartQuantity,
+      cartItemsTotal,
       changeProductCartQuantity,
       removeCartItem
     }}>
