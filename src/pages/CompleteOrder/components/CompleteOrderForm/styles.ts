@@ -19,7 +19,7 @@ export const FormSectionContainer = styled(SectionBaseStyle)`
 export const AddressFormContainer = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: 17.5rem 22.25rem 8.75rem;
+  grid-template-columns: 18rem 22.5rem 9rem;
   column-gap: 0.95rem;
   row-gap: 1.2rem;
   grid-auto-flow: dense;
@@ -28,7 +28,7 @@ export const AddressFormContainer = styled.div`
 
   .cep {
     grid-column: span 3;
-    max-width: 17.5rem;
+    max-width: 18rem;
   }
 
   .street {

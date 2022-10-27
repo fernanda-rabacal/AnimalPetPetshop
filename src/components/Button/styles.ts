@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const ButtonContainer = styled.button`
+  width: 75%;
+  align-self: center;
   padding: 1rem 2.8rem;
-  height: 5rem;
+  height: 4rem;
   color: ${({ theme }) => theme.colors.white};
   font-weight: 700;
   background: ${({ theme }) => theme.colors["green-primary"]};
