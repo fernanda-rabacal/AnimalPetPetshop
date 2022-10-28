@@ -1,13 +1,12 @@
 # Site Animal Pet
 
-🇧🇷 Este é o projeto do site da empresa Animal Pet, sendo feito com ReactJs, baseado no projeto da landing page da mesma empresa. Pretendo criar a rota de produtos e serviços oferecidos, além de futuramente incluir uma opção de e-commerce utilizando primeiramente Context-API e depois uma conexão com servidor.
+🇧🇷 Este é o projeto do site da empresa Animal Pet, sendo feito com ReactJs, baseado no projeto da landing page da mesma empresa. O projeto possui as rotas de Home, Sobre, Produtos e futuramente terá a rota de serviços, além de possuir a rota de Erro. É possivel simular um pedido de delivery de produtos da loja.
 
 🇺🇸 This is the project of Animal Pet enterprise, that it's being made with ReactJs, based on the landing page project of the same enterprise. I intend to create the products and services routes, in addition to including in the future an e-commerce option, using context API first and a server conection later.
 
 ### Status: In progress 🚧
 - Adicionando responsividade
 - Terminando tela de início
-- Adicionando a função de compra e delivery
 
 ## Skills 🧰
 <div>
