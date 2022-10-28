@@ -14,7 +14,7 @@ export const OrderConfirmedContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10rem;
+    gap: 5rem;
   }
 `;
 

@@ -58,7 +58,7 @@ export function OrderConfirmedPage() {
               <RegularText>
                 Previsão de entrega
                 <br />
-                <strong>5 - 7 dias</strong>
+                <strong>30 - 60 min</strong>
               </RegularText>
             }
           />
