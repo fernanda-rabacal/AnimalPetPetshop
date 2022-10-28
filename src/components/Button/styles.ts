@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
-export const ButtonContainer = styled.button`
-  width: 75%;
+interface ButtonProps {
+  size: "order" | "backToHome"
+}
+
+export const ButtonContainer = styled.button<ButtonProps>`
+  width: ${({theme, size}) => size === "order" && "75%"};
   align-self: center;
   padding: 1rem 2.8rem;
   height: 4rem;

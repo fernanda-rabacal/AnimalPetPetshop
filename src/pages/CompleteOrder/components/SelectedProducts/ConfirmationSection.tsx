@@ -33,6 +33,7 @@ export function ConfirmationSection() {
         btnValue="Confirmar Pedido" 
         type="submit"
         disabled={cartQuantity <= 0}
+        size="order"
         />
     </ConfirmationSectionContainer>
   )

@@ -1,3 +1,4 @@
+import { Button } from "../../components/Button";
 import { ErrorPageContainer } from "./styles";
 
 export function Error(){
@@ -8,6 +9,10 @@ export function Error(){
         <h4>Página não encontrada</h4>
         <p>OOPS! Parece que esta página não existe...  
         </p>
+        <Button 
+          size="backToHome" 
+          btnValue="Voltar para a página inicial" 
+          />
       </ErrorPageContainer>
   )
 

@@ -10,6 +10,7 @@ export const ProductCartCardContainer = styled.div`
   border-bottom: 1px solid ${({theme}) => theme.colors["base-button"]};
   padding-bottom: 1.5rem;
   margin-bottom: 1.5rem;
+  flex: 1;
 
   > div {
     display: flex;
@@ -20,6 +21,12 @@ export const ProductCartCardContainer = styled.div`
       width: 10rem;
       height: 10rem;
     }
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
   }
 
   > p {
@@ -29,15 +36,15 @@ export const ProductCartCardContainer = styled.div`
 `
 
 export const ProductName = styled(RegularText)`
-  max-width: 30rem;
+  max-width: 24rem;
 `
 
 export const ActionsContainer = styled.div`
-  margin-top: 3.7rem;
   height: 2rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  margin-bottom: 0.6rem;
 
   > div {
     max-width: 7.5rem;

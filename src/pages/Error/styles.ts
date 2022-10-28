@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ButtonContainer } from "../../components/Button/styles";
 
 export const ErrorPageContainer = styled.div` 
   height: 100%;
@@ -6,6 +7,7 @@ export const ErrorPageContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 3.1rem;
 
   h1 {  
     font-size: 25rem;
@@ -21,6 +23,6 @@ export const ErrorPageContainer = styled.div`
   p {  
     color: ${({theme}) => theme.colors['paragraph']};
     font-size: 3rem;
-    letter-spacing: 2px;
+    margin-bottom: 2rem;
   }
 `
