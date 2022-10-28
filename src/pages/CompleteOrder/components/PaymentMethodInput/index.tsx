@@ -1,4 +1,5 @@
-import { InputHTMLAttributes, ReactNode } from "react";
+import { forwardRef, InputHTMLAttributes, ReactNode } from "react";
+import { RegularText } from "../../../../components/tipography";
 import { ContentContainer, PaymentMethodContainer } from "./styles";
 
 type PaymentMethodProps = InputHTMLAttributes<HTMLInputElement> & {
@@ -7,16 +8,17 @@ type PaymentMethodProps = InputHTMLAttributes<HTMLInputElement> & {
 }
 
 
-export function PaymentMethodInput({icon, label, id, ...props} : PaymentMethodProps){
-  return(
-    <PaymentMethodContainer>
-      <input type="radio" id={id} {...props} name="paymentMethod"/>
-      <label htmlFor={id}>
-        <ContentContainer>
-          {icon}
-          {label}
-        </ContentContainer>
-      </label>
-    </PaymentMethodContainer>
-  )
-}
+export const PaymentMethodInput = forwardRef<HTMLInputElement, PaymentMethodProps>(({icon, label, id, ...props}, ref) => {
+    return(
+      <PaymentMethodContainer>
+        <input ref={ref} type="radio" id={id} {...props} name="paymentMethod"/>
+        <label htmlFor={id}>
+          <ContentContainer>
+            {icon}
+            {label}
+          </ContentContainer>
+        </label>
+      </PaymentMethodContainer>
+    )
+  }
+)  

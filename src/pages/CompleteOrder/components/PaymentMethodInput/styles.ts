@@ -6,6 +6,7 @@ export const PaymentMethodContainer = styled.div`
     appearance: none;
   }
 
+
   input:checked + label div {
     ${({ theme }) => css`
       border-color: ${theme.colors["green-primary"]};

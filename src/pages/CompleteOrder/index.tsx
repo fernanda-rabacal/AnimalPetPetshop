@@ -27,11 +27,13 @@ const confirmOrderFormValidationSchema = zod.object({
       return { message: "Informe o método de pagamento" };
     },
   }),
-})
+});
 
-type ConfirmOrderFormData = zod.infer<typeof confirmOrderFormValidationSchema>
+export type OrderData = zod.infer<typeof confirmOrderFormValidationSchema>;
 
-export function CompleteOrderPage(){
+type ConfirmOrderFormData = OrderData;
+
+export function CompleteOrderPage() {
   const confirmOrderForm = useForm<ConfirmOrderFormData>({
     resolver: zodResolver(confirmOrderFormValidationSchema),
     defaultValues: {
@@ -39,26 +41,27 @@ export function CompleteOrderPage(){
     },
   });
 
-  const { cleanCart } = useContext(CartContext)
   const { handleSubmit } = confirmOrderForm;
-  const navigate = useNavigate()
 
-  function handleConfirmOrder(data: ConfirmOrderFormData) {
-    navigate("/orderConfirmed", {
+  const navigate = useNavigate();
+  const { cleanCart } = useContext(CartContext);
+
+  function handleConfirmOrder(data: ConfirmOrderFormData) {    
+    navigate("/confirmed-order", {
       state: data,
     });
     cleanCart();
   }
 
-  return(
+  return (
     <FormProvider {...confirmOrderForm}>
-      <CompleteOrderContainer 
+      <CompleteOrderContainer
         className="container"
         onSubmit={handleSubmit(handleConfirmOrder)}
-        >
+      >
         <CompleteOrderForm />
         <SelectedCoffees />
       </CompleteOrderContainer>
     </FormProvider>
-  )
+  );
 }

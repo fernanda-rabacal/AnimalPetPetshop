@@ -14,11 +14,12 @@ export const GlobalStyle = createGlobalStyle`
     padding-inline: 1.4rem;
     box-sizing: border-box;
     margin-inline: auto;
-
+    width: min(60rem, 100%);
   }
 
   @media(min-width: 700px){
     .container {
+      width: min(120rem, 100%);
       padding-inline: 3.4rem;
     }
   }
