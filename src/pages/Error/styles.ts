@@ -6,23 +6,35 @@ export const ErrorPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 3.1rem;
 
   h1 {  
-    font-size: 25rem;
+    font-size: 15rem;
     margin: 0;
     color: ${({theme}) => theme.colors['green-primary']};
   }
 
   h4 {  
-    font-size: 4rem;
-    margin: 0;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
   }
 
   p {  
     color: ${({theme}) => theme.colors['paragraph']};
-    font-size: 3rem;
-    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    margin-bottom: 5rem;
+  }
+
+  @media(min-width: 700px) {
+    h1 {
+      font-size: 25rem;
+    }
+
+    h4 {  
+      font-size: 4rem;
+    }
+
+    p {  
+      font-size: 3rem;
+    }
   }
 `

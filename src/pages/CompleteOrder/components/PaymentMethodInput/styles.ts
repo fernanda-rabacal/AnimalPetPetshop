@@ -19,7 +19,7 @@ export const ContentContainer = styled.div`
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: 1rem;
   gap: 1rem;
   color: ${({ theme }) => theme.colors["base-text"]};
   background: ${({ theme }) => theme.colors["base-button"]};
@@ -27,6 +27,7 @@ export const ContentContainer = styled.div`
   border-radius: 4px;
   height: 6rem;
   transition: 0.4s;
+  user-select: none;
 
   svg {
     color: ${({ theme }) => theme.colors["green-primary"]};
@@ -36,6 +37,7 @@ export const ContentContainer = styled.div`
     background: ${({ theme }) => theme.colors["base-hover"]};
   }
 
-  user-select: none;
-
+  @media(min-width: 700px) {
+    font-size: 1.3rem;
+  }
 `

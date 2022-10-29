@@ -5,8 +5,12 @@ export const SelectedCoffeesContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  width: 60rem;
+  width: 100%;
   margin-top: 3.5rem;
+
+  @media(min-width: 700px) {
+    width: 60rem;
+  }
 `;
 
 export const DetailsContainer = styled(SectionBaseStyle)`
@@ -14,6 +18,10 @@ export const DetailsContainer = styled(SectionBaseStyle)`
   display: flex;
   flex-direction: column;
   max-height: 70rem;
+
+  @media(max-width: 500px) {
+    padding-inline: 1.2rem;
+  }
 `;
 
 export const ConfirmationSectionContainer = styled.section`

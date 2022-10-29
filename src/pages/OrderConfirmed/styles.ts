@@ -15,6 +15,22 @@ export const OrderConfirmedContainer = styled.div`
     align-items: center;
     justify-content: space-between;
     gap: 5rem;
+
+    img {
+      display: none;
+    }
+  }
+
+  @media(min-height: 500px) {
+    margin-block: 4rem;
+  }
+
+  @media(min-width: 700px) {
+    section {
+      img {
+        display: initial
+      }
+    }
   }
 `;
 

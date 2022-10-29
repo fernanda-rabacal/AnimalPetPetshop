@@ -5,7 +5,7 @@ interface ButtonProps {
 }
 
 export const ButtonContainer = styled.button<ButtonProps>`
-  width: ${({theme, size}) => size === "order" && "75%"};
+  width: ${({size}) => size === "order" && "75%"};
   align-self: center;
   padding: 1rem 2.8rem;
   height: 4rem;
@@ -27,5 +27,9 @@ export const ButtonContainer = styled.button<ButtonProps>`
 
   &:not(:disabled):hover {
     background: ${({ theme }) => theme.colors["green-primary-dark"]};
+  }
+
+  @media(max-width: 500px){
+    font-size: 1.6rem;
   }
 `;

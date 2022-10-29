@@ -53,4 +53,5 @@ export const IconWrapper = styled.button.attrs({
   &:not(:disabled):hover {
     color: ${({ theme }) => theme.colors["green-primary-dark"]};
   }
+
 `;

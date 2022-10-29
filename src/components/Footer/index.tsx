@@ -6,7 +6,8 @@ export function Footer(){
 
   return(
     <FooterContainer>
-      <p> © Animal Pet, {currentYear}. Todos os direitos reservados</p>
+      <p> © Animal Pet, {currentYear}. Todos os direitos reservados
+      </p>
 
       <SocialLinks>
           <a rel='noreferrer' target="_blank" 

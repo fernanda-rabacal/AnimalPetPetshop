@@ -46,7 +46,7 @@ export function ProductCartCard({product} : ProductCartCardProps) {
 
             <RemoveButton type="button" onClick={handleRemove}>
               <Trash size={16} />
-              REMOVER
+             <p>REMOVER</p> 
             </RemoveButton>
           </ActionsContainer>
         </div>

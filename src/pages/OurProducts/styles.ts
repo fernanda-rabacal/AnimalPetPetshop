@@ -13,7 +13,7 @@ export const Carrousel = styled.div`
 `
 
 export const ScrollRight = styled.button`
-  width: 20rem;
+  width: 60rem;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -22,6 +22,10 @@ export const ScrollRight = styled.button`
 
   img {
     width: 100%
+  }
+
+  @media(min-width: 800px) {
+    width: 40rem;
   }
 `
 

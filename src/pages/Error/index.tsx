@@ -4,7 +4,7 @@ import { ErrorPageContainer } from "./styles";
 export function Error(){
 
   return(
-      <ErrorPageContainer>
+      <ErrorPageContainer className="container">
         <h1>404</h1>
         <h4>Página não encontrada</h4>
         <p>OOPS! Parece que esta página não existe...  
