@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const OrderConfirmedContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 4rem;
   margin-top: 5.4rem;
 
@@ -22,13 +23,15 @@ export const OrderConfirmedContainer = styled.div`
   }
 
   @media(min-height: 500px) {
+    margin-top: 5.4rem;
     margin-block: 4rem;
   }
 
   @media(min-width: 700px) {
     section {
       img {
-        display: initial
+        display: initial;
+        width: 80%;
       }
     }
   }
