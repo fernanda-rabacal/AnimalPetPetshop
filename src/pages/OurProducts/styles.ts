@@ -3,35 +3,11 @@ import styled from "styled-components";
 export const OurProductsContainer = styled.div`
   section {
     display: flex;
+    padding-bottom: 5rem;
+    margin-bottom: 5rem;
   }
+  
+  section:not(:last-child) {
+    border-bottom: 1px solid ${({theme}) => theme.colors["base-button"]};
+  }  
 `
-export const Carrousel = styled.div`
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  overflow: hidden;
-`
-
-export const ScrollRight = styled.button`
-  width: 60rem;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-
-  img {
-    width: 100%
-  }
-
-  @media(min-width: 800px) {
-    width: 40rem;
-  }
-`
-
-export const ScrollLeft = styled(ScrollRight)`
-    img {
-      transform: rotate(180deg);
-    }
-`
-

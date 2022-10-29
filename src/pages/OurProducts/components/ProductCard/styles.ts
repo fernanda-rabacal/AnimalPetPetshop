@@ -5,15 +5,17 @@ export const Item = styled.div`
   border: 1px solid ${({theme}) => theme.colors["brand-greenlight"]};
   margin: 10px;
   padding: 10px;
-  width: 20.5rem;
+  width: 19rem;
   border-radius: 16px;
   flex: none;
-`
+  `
 
 export const Image = styled.div`
+  display: flex;
+  justify-content: center;
   img {
-    width: 90%;
-    height: 90%;
+    width: 60%;
+    height: 60%;
     object-fit: cover;
   }
 `
@@ -27,41 +29,27 @@ export const Info = styled.div`
   span {
     display: block;
     text-align: center;
-    padding: 5px;
     border-radius: 10px;
     color: ${({theme}) => theme.colors["green-primary"]};
-  }
-
-  .name {
     font-size: 1.4rem;
-    font-weight: bold;
-    margin: 10px 0;
-  }
-
-  .old-price {
-    font-size: 1rem;
-    text-decoration: line-through;
-    flex-grow: 1;
-    color: #e9195d
-  }
-
-  .price {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: ${({theme}) => theme.colors.white};
-    background-color: ${({theme}) => theme.colors["green-primary"]};
+    font-weight: 700;
+    margin: 8px 0;
   }
 `
+
 export const CardFooter = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
+  flex-direction: column;
+
   > div {
     display: flex;
     align-items: center;
     gap: 3px;
+
     p {
       line-height: 0.75rem;
     }
@@ -70,6 +58,7 @@ export const CardFooter = styled.div`
 
 export const AddCartWrapper = styled.div`
   width: 9.5rem;
+
   > button {
     width: 2.575rem;
     height: 2.575rem;

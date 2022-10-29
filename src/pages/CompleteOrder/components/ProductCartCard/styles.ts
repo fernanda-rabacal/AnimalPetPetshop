@@ -9,9 +9,9 @@ export const ProductCartCardContainer = styled.div`
   border-bottom: 1px solid ${({theme}) => theme.colors["base-button"]};
   padding-bottom: 1.5rem;
   margin-bottom: 1.5rem;
-  flex: 1;
-
+  
   > div {
+    flex: 1;
     display: flex;
     gap: 1.25rem;
 
@@ -22,6 +22,7 @@ export const ProductCartCardContainer = styled.div`
     }
 
     > div {
+      flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
