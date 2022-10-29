@@ -4,12 +4,13 @@ export const CompleteOrderContainer = styled.form`
   margin-top: 2.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
   gap: 2rem;
   padding-inline: 1rem;
 
   @media(min-width: 1244px) {
     flex-direction: row;
+    align-items: flex-start;
     gap: 4rem;
   }
 `

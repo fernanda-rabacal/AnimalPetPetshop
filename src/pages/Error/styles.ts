@@ -9,7 +9,6 @@ export const ErrorPageContainer = styled.div`
 
   h1 {  
     font-size: 15rem;
-    margin: 0;
     color: ${({theme}) => theme.colors['green-primary']};
   }
 
@@ -26,15 +25,17 @@ export const ErrorPageContainer = styled.div`
 
   @media(min-width: 700px) {
     h1 {
-      font-size: 25rem;
+      font-size: 20rem;
     }
 
     h4 {  
-      font-size: 4rem;
+      font-size: 3.5rem;
+      margin-bottom: 0;
     }
 
     p {  
       font-size: 3rem;
+      margin-bottom: 2rem;
     }
   }
 `
