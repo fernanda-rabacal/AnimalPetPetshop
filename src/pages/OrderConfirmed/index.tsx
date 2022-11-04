@@ -6,7 +6,6 @@ import { useTheme } from "styled-components";
 import { MapPin, Clock, CurrencyDollar } from "phosphor-react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { OrderData } from "../CompleteOrder";
-import { paymentMethods } from "../CompleteOrder/components/CompleteOrderForm/PaymentMethodOptions";
 import { useEffect } from "react";
 
 interface LocationType {
@@ -70,7 +69,13 @@ export function OrderConfirmedPage() {
               <RegularText>
                 Pagamento na entrega
                 <br />
-                <strong>{paymentMethods[state.paymentMethod].label}</strong>
+                <strong>
+                  {
+                    state.paymentMethod === "money" ? "Dinheiro" :
+                    state.paymentMethod === "credit" ? "cartão de Crédito" :
+                    "Cartão de débito"
+                  }
+                </strong>
               </RegularText>
             }
           />

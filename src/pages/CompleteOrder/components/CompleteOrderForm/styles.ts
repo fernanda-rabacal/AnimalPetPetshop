@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { SectionBaseStyle } from "../../styles";
+import * as Radio from "@radix-ui/react-radio-group"
 
 export const CompleteOrderFormContainer = styled.div`
   max-width: 60rem;
@@ -46,7 +47,7 @@ export const AddressFormContainer = styled.div`
   }
 `;
 
-export const PaymentMethodOptionsContainer = styled.div`
+export const PaymentMethodOptionsContainer = styled(Radio.Root)`
   display: flex;
   flex-direction: column;
 
@@ -61,4 +62,40 @@ export const PaymentMethodOptionsContainer = styled.div`
     gap: 0.75rem;
   }
 `;
+
+export const PaymentMethodButton = styled(Radio.Item)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 1rem;
+  gap: 1rem;
+  color: ${({ theme }) => theme.colors["base-text"]};
+  background: ${({ theme }) => theme.colors["base-button"]};
+  border: 1px solid ${({theme}) => theme.colors["base-button"]};
+  border-radius: 4px;
+  height: 6rem;
+  transition: 0.4s;
+  user-select: none;
+  
+  svg {
+    color: ${({ theme }) => theme.colors["green-primary"]};
+  }
+  
+  &:hover {
+    background: ${({ theme }) => theme.colors["base-hover"]};
+  }
+
+  &[data-state="unchecked"] {
+    border: none;
+  }
+
+  &[data-state="checked"] {
+    border-color: ${({theme}) =>  theme.colors["green-primary"]};
+  }
+  
+  @media(min-width: 700px) {
+    font-size: 1.3rem;
+  }
+`
 
