@@ -31,4 +31,4 @@ export const defaultTheme = {
     "text-regular-xl": "2rem",
     "components-button-g": "1.875rem",
   }
-}
+} as const

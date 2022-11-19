@@ -5,9 +5,13 @@ export const Item = styled.div`
   border: 1px solid ${({theme}) => theme.colors["brand-greenlight"]};
   margin: 10px;
   padding: 10px;
-  width: 19rem;
+  width: 15rem;
   border-radius: 16px;
   flex: none;
+
+  @media(min-width: 700px) {
+    width: 19rem;
+  }
   `
 
 export const Image = styled.div`
