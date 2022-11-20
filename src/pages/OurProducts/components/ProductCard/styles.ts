@@ -2,11 +2,12 @@ import styled from "styled-components"
 
 export const Item = styled.div`
   background-color: ${({theme}) => theme.colors.white};
-  border: 1px solid ${({theme}) => theme.colors["brand-greenlight"]};
+  box-shadow: 0 0 5px gray;
   margin: 10px;
   padding: 10px;
-  width: 15rem;
-  border-radius: 16px;
+  width: 16rem;
+  max-height: 29rem;
+  border-radius: 6px;
   flex: none;
 
   @media(min-width: 700px) {
@@ -33,9 +34,8 @@ export const Info = styled.div`
   span {
     display: block;
     text-align: center;
-    border-radius: 10px;
     color: ${({theme}) => theme.colors["green-primary"]};
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 700;
     margin: 8px 0;
   }

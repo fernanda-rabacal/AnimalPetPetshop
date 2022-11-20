@@ -11,10 +11,12 @@ export const FilterContainer = styled.aside`
   h1 {
     font-size: 2rem;
   }
-`
+  
+  div {
+    margin-top: 2rem;
+  }
+  `
 export const FilterOption = styled.div`
-  margin-top: 1.5rem;
-
   label {
     color: ${({theme}) => theme.colors.headline};
     font-size: 1.8rem;
@@ -27,6 +29,8 @@ export const FilterOption = styled.div`
       opacity: 0;
       cursor: pointer;
       z-index: 1;
+      height: 2rem;
+      width: 2.2rem;
 
       &:checked ~ .checkmark {
         background-color: ${({theme}) => theme.colors["green-primary"]};

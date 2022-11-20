@@ -21,7 +21,7 @@ export const DetailsContainer = styled(SectionBaseStyle)`
 
   > div {
     margin-bottom: 2rem;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding-right: 1rem;
   }
 

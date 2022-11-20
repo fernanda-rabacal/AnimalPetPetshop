@@ -16,14 +16,18 @@ export const AboutContent = styled.div`
 
   img {
     border-radius: 18px;
-    height: 46rem;
+    height: 50rem;
+    max-width: 46rem;
   }
-
-  @media(min-width: 700px) {
-    flex-direction: row;
+  
+  @media(min-width: 1024px){
     margin-inline: auto;
+    flex-direction: row;
+    img {
+      max-width: 60rem;
+    }
   }
-`
+ `
 
 export const HistoryText = styled(RegularText)`
   margin-top: 2rem;

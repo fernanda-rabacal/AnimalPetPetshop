@@ -1,47 +1,17 @@
 import { FormerSubtitle, FormerTitle } from "../../components/tipography";
 import { OurProductsContainer, ProductsAndFilters, ProductsContainer } from "./styles";
 import { ProductCard } from "./components/ProductCard";
-import { petFoods } from "../../data/products/petFoods"; 
-import { medicines } from "../../data/products/medicines";
 import { useContext, useEffect, useMemo, useState } from "react";
 import { Pagination } from "../../components/Pagination";
 import { FilterOptionsContainer } from "./components/Filter";
 import { CartContext } from "../../contexts/CartContext";
 
 export function OurProducts(){
-  const productTest = [...petFoods, ...medicines]
-  const [products, setProducts] = useState(productTest)
   const [currentPage, setCurrentPage] = useState(1);
-  const { checked } = useContext(CartContext)
+  const { checked, filterProductsPerCategory, products } = useContext(CartContext)
   const itemsPerPage =  window.innerWidth < 550 ? 10 
   : window.innerWidth < 1024 ? 9 : 12;
-
-  function filterProductsPerCategory(checked: number[]) {
-    let newProducts = []
-
-    if(checked.includes(1)) {
-      const petfoods = productTest.filter((product) => {
-        return product.category === "petfood"
-      })
-
-      newProducts.push(...petfoods)
-    }
-
-    if(checked.includes(2)) {
-      const medicine = productTest.filter((product) => {
-        return product.category === "medicine"
-      })
-
-      newProducts.push(...medicine)
-    }
-
-    if(checked.length === 0) {
-      return setProducts(productTest)
-    }
-
-    setProducts(newProducts)
-  }
-
+  
   const currentTableData = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * itemsPerPage;
     const lastPageIndex = firstPageIndex + itemsPerPage;
