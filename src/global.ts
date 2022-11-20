@@ -19,8 +19,8 @@ export const GlobalStyle = createGlobalStyle`
 
   @media(min-width: 700px){
     .container {
-      width: min(120rem, 100%);
-      padding-inline: 3.4rem;
+      width: min(125rem, 100%);
+      padding-inline: 3rem;
     }
   }
 

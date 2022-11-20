@@ -3,6 +3,7 @@ export const petFoods = [
     "id": "94313731",
     "name": "Ração Golden Special para Cães Adultos Sabor Frango e Carne" ,
     "price": 149.90,
+    "category" : "petfood",
     "image": "https://static.petz.com.br/fotos/1658429301983_mini.jpg"
   },
   {

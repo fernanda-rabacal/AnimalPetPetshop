@@ -183,6 +183,7 @@ export const medicines = [
     "id": "AAAAAAAZ",
     "name": "Aurivet Vetnil 13g",
     "price": 90.87,
-    "image": "https://static.petz.com.br/fotos/1663335725062.jpg"
+    "image": "https://static.petz.com.br/fotos/1663335725062.jpg",
+    "category": "medicine"
   },
 ]

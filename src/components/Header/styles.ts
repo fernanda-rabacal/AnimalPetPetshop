@@ -7,11 +7,10 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  background-color: ${({theme}) => theme.colors["green-primary"]};
+  box-shadow: 0 0 10px gray;
 
   h1 {
-    color: ${({theme}) => theme.colors["white"]};
+    color: ${({theme}) => theme.colors.black};
     font-size: 1.5rem;
   }
 
@@ -37,7 +36,7 @@ export const PagesNavigators = styled.div`
   gap: 1.4rem;
   
   p {
-    color: ${({theme}) => theme.colors["white"]};
+    color: ${({theme}) => theme.colors.black};
     font-size: 1.2rem;
   }
 
@@ -76,7 +75,7 @@ export const HeaderButtonsContainer = styled.div`
 export const CartWrapper = styled.div`
   box-sizing: border-box;
   color: ${({theme}) => theme.colors.white};
-  background-color: ${({theme}) => theme.colors["green-primary-dark"]};
+  background-color: ${({theme}) => theme.colors["green-primary"]};
   padding: 0.5rem;
   border-radius: 6px;
   position: relative;
@@ -86,6 +85,11 @@ export const CartWrapper = styled.div`
   justify-content: center;
   gap: 0.75rem;
   font-size: 1.125rem;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: ${({theme}) => theme.colors["green-primary-dark"]};
+  }
 
   span {
     position: absolute;
@@ -95,7 +99,7 @@ export const CartWrapper = styled.div`
     top: calc(-1.35rem / 2);
     right: calc(-1.35rem / 2);
     color: ${({ theme }) => theme.colors.white};
-    background: ${({ theme }) => theme.colors["green-primary-dark"]};
+    background: ${({ theme }) => theme.colors["green-primary"]};
     display: flex;
     align-items: center;
     justify-content: center;

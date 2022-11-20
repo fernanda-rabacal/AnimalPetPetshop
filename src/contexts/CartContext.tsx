@@ -15,6 +15,8 @@ interface CartContextType {
   cartItems: CartItem[];
   cartQuantity: number;
   cartItemsTotal: number;
+  checked: number[];
+  handleToggle: (value: number) => void
   cleanCart: () => void;
   addItemToCart: (item: CartItem) => void;
   removeCartItem: (item: CartItem) => void;
@@ -33,6 +35,21 @@ export function CartContextProvider({children} : CartContextProps){
     }
     return [];
   })
+  const [checked, setChecked] = useState<number[]>([])
+
+  function handleToggle(value: number) {
+    const currentIndex = checked.indexOf(value);
+    const newChecked = [...checked];
+
+    if (currentIndex === -1) {
+        newChecked.push(value)
+    } else {
+        newChecked.splice(currentIndex, 1)
+    }
+
+    setChecked(newChecked)
+  }
+
   const cartQuantity = cartItems.length
   const cartItemsTotal = cartItems.reduce((total, cartItem) => {
     return total + cartItem.price * cartItem.quantity;
@@ -86,13 +103,15 @@ export function CartContextProvider({children} : CartContextProps){
 
   return(
     <CartContext.Provider value={{
+      checked,
       cartItems,
       addItemToCart,
       cartQuantity,
       cartItemsTotal,
       changeProductCartQuantity,
       removeCartItem,
-      cleanCart
+      cleanCart,
+      handleToggle
     }}>
       {children}
     </CartContext.Provider>

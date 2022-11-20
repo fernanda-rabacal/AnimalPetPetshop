@@ -44,12 +44,13 @@ export function Pagination({ onPageChange,
 
       {paginationRange.map(pageNumber => {
         if (pageNumber === DOTS) { 
-          return <PaginationItem className="dots">&#8230;</PaginationItem>;
+          return <PaginationItem className="dots" key="dots">&#8230;</PaginationItem>;
         }
 		
         // Renderize a amostra de página
         return (
           <PaginationItem 
+            key={pageNumber}
             selected={pageNumber === currentPage} 
             onClick={() => onPageChange(pageNumber)}
           >

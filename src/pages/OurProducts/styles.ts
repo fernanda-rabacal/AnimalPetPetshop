@@ -11,6 +11,23 @@ export const OurProductsContainer = styled.div`
     border-bottom: 1px solid ${({theme}) => theme.colors["base-button"]};
   }  
 `
+
+export const ProductsAndFilters = styled.div`
+  display: flex;
+  gap: 3rem;
+
+  p {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 5rem;
+  }
+`
+
+
+
 export const ProductsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -26,9 +43,5 @@ export const ProductsContainer = styled.div`
 
   @media(min-width: 1024px) {
     grid-template-columns: repeat(4, 1fr);
-  }
-
-  @media(min-width: 1244px) {
-    grid-template-columns: repeat(5, 1fr);
   }
 `
