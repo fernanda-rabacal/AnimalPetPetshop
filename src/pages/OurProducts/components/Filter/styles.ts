@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const FilterContainer = styled.aside`
-  width: 40rem;
+  width: 30rem;
   margin-block: 1rem;
   display: flex;
   flex-direction: column;

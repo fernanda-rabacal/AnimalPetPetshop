@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const OurProductsContainer = styled.div`
+  scrollbar-gutter: stable;
   section {
     display: flex;
     padding-bottom: 5rem;

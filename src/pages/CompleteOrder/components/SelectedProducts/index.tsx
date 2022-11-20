@@ -15,12 +15,14 @@ export function SelectedCoffees() {
       </TitleText>
 
       <DetailsContainer>
-        {cartItems.map(cartItem => {
-          return <ProductCartCard 
-            key={cartItem.id}
-            product={cartItem}
-          />
-        })}
+        <div>
+          {cartItems.map(cartItem => {
+            return <ProductCartCard 
+              key={cartItem.id}
+              product={cartItem}
+            />
+          })}
+        </div>
 
         <ConfirmationSection />
       </DetailsContainer>

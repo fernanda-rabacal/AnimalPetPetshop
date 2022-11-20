@@ -24,7 +24,6 @@ export function OurProducts(){
         return product.category === "petfood"
       })
 
-      console.log(petfoods)
       newProducts.push(...petfoods)
     }
 
@@ -33,7 +32,6 @@ export function OurProducts(){
         return product.category === "medicine"
       })
 
-      console.log(medicine)
       newProducts.push(...medicine)
     }
 
@@ -41,7 +39,6 @@ export function OurProducts(){
       return setProducts(productTest)
     }
 
-    console.log(newProducts, "teste")
     setProducts(newProducts)
   }
 

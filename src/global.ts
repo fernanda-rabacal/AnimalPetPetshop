@@ -5,6 +5,11 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 62.5%; 
   }
 
+  html {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
   body {
     background-color: ${({theme}) => theme.colors["brand-beige"]};
   }

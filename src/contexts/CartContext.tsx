@@ -10,7 +10,6 @@ export interface CartItem extends Product {
   quantity: number;
 }
 
-
 interface CartContextType {
   cartItems: CartItem[];
   cartQuantity: number;

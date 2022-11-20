@@ -89,9 +89,14 @@ export const CartWrapper = styled.div`
 
   &:hover {
     background-color: ${({theme}) => theme.colors["green-primary-dark"]};
+
+    span {
+      background-color: ${({theme}) => theme.colors["green-primary-dark"]};
+    }
   }
 
   span {
+    transition: 0.2s;
     position: absolute;
     width: 1.45rem;
     height: 1.45rem;

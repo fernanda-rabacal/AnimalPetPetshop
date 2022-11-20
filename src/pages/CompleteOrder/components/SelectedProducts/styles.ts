@@ -17,7 +17,13 @@ export const DetailsContainer = styled(SectionBaseStyle)`
   border-radius: 6px 44px 6px 44px;
   display: flex;
   flex-direction: column;
-  max-height: 70rem;
+  max-height: 58rem;
+
+  > div {
+    margin-bottom: 2rem;
+    overflow-y: scroll;
+    padding-right: 1rem;
+  }
 
   @media(max-width: 500px) {
     padding-inline: 1.2rem;
