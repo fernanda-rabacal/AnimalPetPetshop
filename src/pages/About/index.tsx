@@ -21,7 +21,7 @@ export function About(){
       
         <Testimonials>
           <FormerTitle color="green-primary" as="h4">Depoimentos</FormerTitle>
-          <FormerSubtitle size="s" as="h2">Opiniões de nossos clientes</FormerSubtitle>
+          <FormerSubtitle size="l" as="h2">Opiniões de nossos clientes</FormerSubtitle>
 
           <Cards>
             <Card>

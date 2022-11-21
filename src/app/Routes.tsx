@@ -6,6 +6,7 @@ import { Home } from "../pages/Home"
 import { OurProducts } from "../pages/OurProducts"
 import { CompleteOrderPage } from "../pages/CompleteOrder"
 import { OrderConfirmedPage } from "../pages/OrderConfirmed"
+import { ProductDetails } from "../pages/ProductDetails"
 
 export function Router(){
   return (
@@ -16,7 +17,8 @@ export function Router(){
         <Route path="/complete-order" element={<CompleteOrderPage />} />
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/our-products" element={<OurProducts />} />
+        <Route path="/products" element={<OurProducts />} />
+        <Route path="/products/:id" element={<ProductDetails />} />
         <Route path="/confirmed-order" element={<OrderConfirmedPage />} />
       </Route>
     </Routes>

@@ -1,12 +1,8 @@
 import styled from "styled-components"
 
 export const FilterContainer = styled.aside`
-  width: 30rem;
-  margin-block: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  padding: 1rem;
 
   h1 {
     font-size: 2rem;
@@ -14,6 +10,15 @@ export const FilterContainer = styled.aside`
   
   div {
     margin-top: 2rem;
+  }
+
+  @media(min-width: 1024px) {
+    width: 30rem;
+    margin-block: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
   }
   `
 export const FilterOption = styled.div`

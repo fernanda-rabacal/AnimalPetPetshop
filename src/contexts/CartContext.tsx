@@ -2,6 +2,7 @@ import produce from "immer";
 import { createContext, ReactNode, useEffect, useState } from "react"
 import { medicines } from "../data/products/medicines";
 import { petFoods } from "../data/products/petFoods";
+import { FilterOptions } from "../pages/OurProducts/components/Filter";
 import { Product } from "../pages/OurProducts/components/ProductCard"
 
 interface CartContextProps {
@@ -105,7 +106,7 @@ export function CartContextProvider({children} : CartContextProps){
   function filterProductsPerCategory(checked: number[]) {
     let newProducts = []
 
-    if(checked.includes(1)) {
+    if(checked.includes(FilterOptions.PET_FOODS)) {
       const petfoods = productTest.filter((product) => {
         return product.category === "petfood"
       })
@@ -113,7 +114,7 @@ export function CartContextProvider({children} : CartContextProps){
       newProducts.push(...petfoods)
     }
 
-    if(checked.includes(2)) {
+    if(checked.includes(FilterOptions.MEDICINES)) {
       const medicine = productTest.filter((product) => {
         return product.category === "medicine"
       })
@@ -121,7 +122,7 @@ export function CartContextProvider({children} : CartContextProps){
       newProducts.push(...medicine)
     }
 
-    if(checked.includes(3)) {
+    if(checked.includes(FilterOptions["25_MINUS"])) {
       const price25 = productTest.filter((product) => {
         return product.price <= 25
       })
@@ -129,28 +130,28 @@ export function CartContextProvider({children} : CartContextProps){
       newProducts.push(...price25)
     }
 
-    if(checked.includes(4)) {
+    if(checked.includes(FilterOptions["50_MINUS"])) {
       const price = productTest.filter((product) => {
         return product.price <= 50 && product.price > 25
       })
 
       newProducts.push(...price)
     }
-    if(checked.includes(5)) {
+    if(checked.includes(FilterOptions["100_MINUS"])) {
       const price = productTest.filter((product) => {
         return product.price <= 100 && product.price > 50
       })
 
       newProducts.push(...price)
     }
-    if(checked.includes(6)) {
+    if(checked.includes(FilterOptions["200_MINUS"])) {
       const price = productTest.filter((product) => {
         return product.price <= 200 && product.price > 100
       })
 
       newProducts.push(...price)
     }
-    if(checked.includes(7)) {
+    if(checked.includes(FilterOptions["200_PLUS"])) {
       const price = productTest.filter((product) => {
         return product.price > 200
       })

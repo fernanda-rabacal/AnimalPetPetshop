@@ -15,6 +15,7 @@ export const AboutContent = styled.div`
   gap: 5rem;
 
   img {
+    width: 100%;
     border-radius: 18px;
     height: 50rem;
     max-width: 46rem;
@@ -38,6 +39,7 @@ export const Testimonials = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
 `
 
 export const Cards = styled.div`

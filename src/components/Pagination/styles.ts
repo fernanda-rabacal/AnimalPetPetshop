@@ -16,7 +16,7 @@ interface PaginationItemProps {
 
 export const PaginationItem = styled.li<PaginationItemProps>`
   padding: 0 1.25rem;
-  height: 3.2rem;
+  height: 2.2rem;
   text-align: center;
   margin: auto 0.4rem;
   color: rgba(0, 0, 0, 0.87);
@@ -26,9 +26,16 @@ export const PaginationItem = styled.li<PaginationItemProps>`
   letter-spacing: 0.01071em;
   border-radius: 1rem;
   line-height: 1.43;
-  font-size: 2rem;
-  min-width: 3.2rem;
+  font-size: 1rem;
+  min-width: 2.2rem;
   transition: 0.2s;
+  cursor: pointer;
+
+  @media(min-width: 700px) {
+    font-size: 2rem;
+    min-width: 3.2rem;
+    height: 3.2rem;
+  }
   
   ${({disabled}) => disabled && css`
     pointer-events: none;

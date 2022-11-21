@@ -1,6 +1,7 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components"
 
-export const Item = styled.div`
+export const Item = styled(NavLink)`
   background-color: ${({theme}) => theme.colors.white};
   box-shadow: 0 0 5px gray;
   margin: 10px;
@@ -9,6 +10,7 @@ export const Item = styled.div`
   max-height: 29rem;
   border-radius: 6px;
   flex: none;
+  cursor: pointer;
 
   @media(min-width: 700px) {
     width: 19rem;

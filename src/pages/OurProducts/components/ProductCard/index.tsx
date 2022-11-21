@@ -42,11 +42,10 @@ export function ProductCard({
     addItemToCart(itemToAdd)
   }
 
-
   const formattedPrice = formatMoney(product.price);
 
   return(
-    <Item key={product.id}>
+    <Item key={product.id} to={`/products/${product.id}`}>
       <Image>
         <img src={product.image} alt={product.name} />
       </Image>

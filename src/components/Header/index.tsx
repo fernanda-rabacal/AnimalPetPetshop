@@ -19,7 +19,7 @@ export function Header(){
         <NavLink to="/about">
           <p>Sobre</p>
         </NavLink>
-        <NavLink to="/our-products">
+        <NavLink to="/products">
           <p>Produtos</p>
         </NavLink>
         <NavLink to="/services">
