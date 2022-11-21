@@ -1,7 +1,7 @@
-import ShopFront from "../../assets/Fachada-antiga-da-loja.JPG"
-import Quote from '../../assets/quote-marks.svg'
-import { AboutContainer, AboutContent, Card, Cards, HistoryText, Testimonials } from './styles'
-import { FormerSubtitle, FormerTitle } from '../../components/tipography'
+import ShopFront from '../../assets/old-shop-front.jpg';
+import Quote from '../../assets/quote-marks.svg';
+import { AboutContainer, AboutContent, Card, Cards, HistoryText, Testimonials } from './styles';
+import { FormerSubtitle, FormerTitle } from '../../components/tipography';
 
 
 export function About(){
