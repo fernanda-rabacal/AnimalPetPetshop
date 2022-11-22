@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ContactContainer = styled.section`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   text-align: left;
@@ -37,5 +38,17 @@ export const ContactContainer = styled.section`
   iframe {
     border: 0;
     border-radius: 2rem;
+    
+    width: 45rem;
+    height: 35rem;
+  }
+
+  @media(min-width: 1024px) {
+    flex-direction: row;
+
+    iframe {
+      width: 55rem;
+      height: 45rem;
+    }
   }
 `

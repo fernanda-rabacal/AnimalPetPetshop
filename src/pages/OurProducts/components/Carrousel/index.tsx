@@ -1,5 +1,5 @@
 import { MouseEvent, useRef } from "react";
-import { Carrousel, ScrollLeft, ScrollRight } from "./styles";
+import { Carrousel, CarrouselContainerStyled, ScrollLeft, ScrollRight } from "./styles";
 import { Product, ProductCard } from "../ProductCard";
 import Chevron from "../../../../assets/right_chevron.png"
 
@@ -27,24 +27,24 @@ export function CarrouselContainer({productArray} : CarrouselProps) {
   }
 
   return(
-    <section>
-          <ScrollLeft onClick={(e) => handleLeftClick(e)}>
-            <img src={Chevron} alt="Scroll Left" />
-          </ScrollLeft>
-        <Carrousel ref={carrousel}>
+    <CarrouselContainerStyled>
+      <ScrollLeft onClick={(e) => handleLeftClick(e)}>
+        <img src={Chevron} alt="Scroll Left" />
+      </ScrollLeft>
+      <Carrousel ref={carrousel}>
 
-          {productArray.map((product) => {
-            return (
-              <ProductCard 
-                key={product.id}
-                product={product} 
-                />
-            )})}
+        {productArray.map((product) => {
+          return (
+            <ProductCard 
+              key={product.id}
+              product={product} 
+              />
+          )})}
 
-        </Carrousel>
-          <ScrollRight onClick={(e) => handleRightClick(e)}>
-            <img src={Chevron} alt="Scroll Right" />
-          </ScrollRight>
-      </section>
+      </Carrousel>
+      <ScrollRight onClick={(e) => handleRightClick(e)}>
+        <img src={Chevron} alt="Scroll Right" />
+      </ScrollRight>
+    </CarrouselContainerStyled>
   )
 }

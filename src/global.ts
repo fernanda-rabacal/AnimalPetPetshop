@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
 
   .container {  
     margin-block: 4rem;
-    padding-inline: 1.4rem;
+    padding-inline: 2rem;
     box-sizing: border-box;
     margin-inline: auto;
     width: min(60rem, 100%);
@@ -25,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
 
   @media(min-width: 700px){
     .container {
-      width: min(125rem, 100%);
+      width: min(130rem, 100%);
       padding-inline: 3rem;
     }
   }

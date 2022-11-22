@@ -31,7 +31,7 @@ export function Contact() {
       </div>
 
       <div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62215.56211293567!2d-38.500742573916874!3d-12.94158041807136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x716109a7326eda5%3A0x8e5df67296cf60a!2sAnimal%20Pet!5e0!3m2!1spt-BR!2sbr!4v1654028266323!5m2!1spt-BR!2sbr" width="550" height="450" allowFullScreen={false} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62215.56211293567!2d-38.500742573916874!3d-12.94158041807136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x716109a7326eda5%3A0x8e5df67296cf60a!2sAnimal%20Pet!5e0!3m2!1spt-BR!2sbr!4v1654028266323!5m2!1spt-BR!2sbr" allowFullScreen={false} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </ContactContainer>
   )

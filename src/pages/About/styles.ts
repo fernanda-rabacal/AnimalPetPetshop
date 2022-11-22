@@ -15,17 +15,19 @@ export const AboutContent = styled.div`
   gap: 5rem;
 
   img {
-    width: 100%;
+    width: 90%;
     border-radius: 18px;
-    height: 50rem;
+    height: 45rem;
     max-width: 46rem;
   }
   
   @media(min-width: 1024px){
     margin-inline: auto;
     flex-direction: row;
+
     img {
       max-width: 60rem;
+      height: 50rem;
     }
   }
  `

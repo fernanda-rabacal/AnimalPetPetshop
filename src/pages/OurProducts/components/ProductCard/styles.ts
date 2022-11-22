@@ -11,11 +11,7 @@ export const Item = styled(NavLink)`
   border-radius: 6px;
   flex: none;
   cursor: pointer;
-
-  @media(min-width: 700px) {
-    width: 19rem;
-  }
-  `
+`
 
 export const Image = styled.div`
   display: flex;
@@ -37,7 +33,7 @@ export const Info = styled.div`
     display: block;
     text-align: center;
     color: ${({theme}) => theme.colors["green-primary"]};
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     margin: 8px 0;
   }
