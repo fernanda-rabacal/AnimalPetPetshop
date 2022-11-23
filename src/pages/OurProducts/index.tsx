@@ -10,7 +10,7 @@ export function OurProducts(){
   const [currentPage, setCurrentPage] = useState(1);
   const { checked, filterProductsPerCategory, products } = useContext(CartContext)
   const itemsPerPage =  window.innerWidth < 550 ? 10 
-  : window.innerWidth < 1024 ? 9 : 12;
+  : window.innerWidth < 1024 ? 9 : 15;
   
   const currentTableData = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * itemsPerPage;

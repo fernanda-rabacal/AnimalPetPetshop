@@ -23,7 +23,7 @@ export const ScrollRight = styled.button`
     width: 100%;
     background: ${({ theme }) => theme.colors.white};
     border-radius: 9999px;
-    border: 1px solid ${({theme}) => theme.colors["brand-greenlight"]};
+    border: 1px solid ${({theme}) => theme.colors["base-card"]};
   }
 
   @media(min-width: 800px) {

@@ -54,7 +54,7 @@ export function FilterOptionsContainer() {
   return(
     <FilterContainer>
       <p>
-        <Funnel size={28} weight="bold"/>
+        <Funnel size={28} weight="fill"/>
         Filtros
       </p>
 
@@ -65,7 +65,7 @@ export function FilterOptionsContainer() {
 
         {categoryCheckbox.map(checkbox => {
           return(
-            <FilterOption>
+            <FilterOption key={checkbox.value}>
               <label htmlFor={checkbox.name}>
                 <input
                   type="checkbox"
@@ -87,7 +87,7 @@ export function FilterOptionsContainer() {
 
       {priceCheckbox.map(checkbox => {
           return(
-            <FilterOption>
+            <FilterOption key={checkbox.value}>
               <label htmlFor={checkbox.name}>
                 <input
                   type="checkbox"

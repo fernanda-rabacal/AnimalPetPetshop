@@ -4,8 +4,14 @@ export const FilterContainer = styled.aside`
   display: flex;
   flex-direction: column;
 
+  p {
+    color: ${({ theme }) => theme.colors["green-primary"]};
+  }
+
   h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    color: ${({ theme }) => theme.colors["green-primary"]};
+    border-bottom: 1px solid ${({ theme }) => theme.colors["green-primary"]};
   }
   
   div {
@@ -13,7 +19,7 @@ export const FilterContainer = styled.aside`
   }
 
   @media(min-width: 1024px) {
-    width: 30rem;
+    width: 25rem;
     margin-block: 1rem;
     display: flex;
     flex-direction: column;
@@ -23,8 +29,8 @@ export const FilterContainer = styled.aside`
   `
 export const FilterOption = styled.div`
   label {
-    color: ${({theme}) => theme.colors.headline};
-    font-size: 1.8rem;
+    color: ${({theme}) => theme.colors.paragraph};
+    font-size: 1.6rem;
     display: flex;
     gap: 1rem;
     align-items: center; 
@@ -34,8 +40,8 @@ export const FilterOption = styled.div`
       opacity: 0;
       cursor: pointer;
       z-index: 1;
-      height: 2rem;
-      width: 2.2rem;
+      height: 1.8rem;
+      width: 1.8rem;
 
       &:checked ~ .checkmark {
         background-color: ${({theme}) => theme.colors["green-primary"]};
@@ -49,8 +55,8 @@ export const FilterOption = styled.div`
 
     .checkmark {
       position: relative;
-      height: 2rem;
-      width: 2.2rem;
+      height: 1.8rem;
+      width: 1.8rem;
       background-color: transparent;
       border: 3px solid ${({theme}) => theme.colors["green-primary"]};;
       border-radius: 3px;

@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 export const Item = styled(NavLink)`
   background-color: ${({theme}) => theme.colors.white};
-  box-shadow: 0 0 5px gray;
+  border: 1px solid ${({theme}) => theme.colors["base-card"]};
   margin: 10px;
   padding: 10px;
   width: 16rem;
@@ -11,14 +11,19 @@ export const Item = styled(NavLink)`
   border-radius: 6px;
   flex: none;
   cursor: pointer;
+  
+  &:hover {
+    transition: 0.2s;
+    box-shadow: 0 0 5px gray;
+  }
 `
 
 export const Image = styled.div`
   display: flex;
   justify-content: center;
   img {
-    width: 60%;
-    height: 60%;
+    width: 70%;
+    height: 70%;
     object-fit: cover;
   }
 `
@@ -33,7 +38,7 @@ export const Info = styled.div`
     display: block;
     text-align: center;
     color: ${({theme}) => theme.colors["green-primary"]};
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 700;
     margin: 8px 0;
   }

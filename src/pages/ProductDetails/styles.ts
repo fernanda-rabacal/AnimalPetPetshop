@@ -4,7 +4,7 @@ export const ProductDetailsContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10rem;
-  color: ${({ theme }) => theme.colors.paragraph}
+  color: ${({ theme }) => theme.colors.paragraph};
 `
 
 export const Infos = styled.div`
@@ -62,6 +62,6 @@ export const AddToCart = styled.div`
 
 
 export const Description = styled.div`
-  margin-top: 1.5rem;
+  margin-block: 1.5rem;
   max-width: 50rem;
 `

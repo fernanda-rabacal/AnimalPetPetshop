@@ -38,6 +38,13 @@ export const PagesNavigators = styled.div`
   p {
     color: ${({theme}) => theme.colors.black};
     font-size: 1.2rem;
+    border-bottom: 2px solid transparent;
+    padding-block: 1.8rem;
+    transition: 0.2s;
+
+    &:hover {
+      border-color: ${({theme}) =>  theme.colors["green-primary"]};
+    }
   }
 
   @media(min-width: 700px) {

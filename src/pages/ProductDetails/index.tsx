@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext, useMemo, useState } from "react"
 import { useParams } from "react-router-dom"
 import { Button } from "../../components/Button"
 import { QuantityInput } from "../../components/QuantityInput"
@@ -23,9 +23,11 @@ export function ProductDetails() {
     return <Error />
   }
   
-  const sameCategoryProducts =  random(products.filter(item => {
+  const sameCategoryProducts = useMemo(() => {
+    return random(products.filter(item => {
       return item.category == product.category
   }))
+  }, [products])
   
   const formattedPrice = formatMoney(product.price);
 

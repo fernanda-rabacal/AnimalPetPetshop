@@ -38,11 +38,7 @@ export const ProductsContainer = styled.div`
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @media(min-width: 700px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   @media(min-width: 1024px) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 `

@@ -60,7 +60,7 @@ export function ProductCard({
             </TitleText>
           </div>
 
-          <AddCartWrapper>
+          {/* <AddCartWrapper>
             <QuantityInput 
               quantity={quantity}  
               onIncrease={handleIncrease}
@@ -69,7 +69,7 @@ export function ProductCard({
             <button onClick={() => handleAddItemToCart()}>
               <ShoppingCart weight="fill" size={20} color="#fff"/>
             </button>
-          </AddCartWrapper>
+          </AddCartWrapper> */}
         </CardFooter>
       </Info>
     </Item>        
