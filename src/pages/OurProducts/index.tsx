@@ -5,6 +5,7 @@ import { useContext, useEffect, useMemo, useState } from "react";
 import { Pagination } from "../../components/Pagination";
 import { FilterOptionsContainer } from "./components/Filter";
 import { CartContext } from "../../contexts/CartContext";
+import { OrderDropDown } from "./components/OrderDropDown";
 
 export function OurProducts(){
   const [currentPage, setCurrentPage] = useState(1);
@@ -26,14 +27,20 @@ export function OurProducts(){
   return(
     <OurProductsContainer className="container">
       <FormerTitle size="l" color="green-primary">
-        NOSSOS PRODUTOS
-      </FormerTitle>
-
-      <FormerSubtitle size="l">
         Seleção dos melhores produtos
-      </FormerSubtitle>
-
+      </FormerTitle>
       <ProductsAndFilters>
+        <div>
+          <span>ORDENAR POR</span>
+          <select defaultValue={0}>
+            <option value={0}>Mais Relevantes</option>
+            <option value={1}>Menor preço</option>
+            <option value={2}>Maior preço</option>
+            <option value={3}>Nome de A-Z</option>
+            <option value={4}>Nome de Z-A</option>
+          </select>
+        </div>
+
         <FilterOptionsContainer />
 
         <ProductsContainer>

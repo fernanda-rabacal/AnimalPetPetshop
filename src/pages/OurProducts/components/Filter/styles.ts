@@ -6,6 +6,11 @@ export const FilterContainer = styled.aside`
 
   p {
     color: ${({ theme }) => theme.colors["green-primary"]};
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-size: 2.6rem;
+    font-weight: 700;
   }
 
   h1 {
@@ -44,8 +49,8 @@ export const FilterOption = styled.div`
       width: 1.8rem;
 
       &:checked ~ .checkmark {
-        background-color: ${({theme}) => theme.colors["green-primary"]};
-        border-color: ${({theme}) => theme.colors["green-primary"]};
+        background-color: ${({theme}) => theme.colors.headline};
+        border-color: ${({theme}) => theme.colors.headline};
       }
 
       &:checked ~ .checkmark:after {
@@ -58,18 +63,18 @@ export const FilterOption = styled.div`
       height: 1.8rem;
       width: 1.8rem;
       background-color: transparent;
-      border: 3px solid ${({theme}) => theme.colors["green-primary"]};;
+      border: 3px solid ${({theme}) => theme.colors.headline};;
       border-radius: 3px;
 
       &:after {
         content: "";
         position: absolute;
         display: none;
-        left: .5rem;
+        left: .3rem;
         width: .5rem;
-        height: 1rem;
+        height: 0.8rem;
         border: solid ${({theme}) => theme.colors.white};
-        border-width: 0 3px 3px 0;
+        border-width: 0 2px 2px 0;
         -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         transform: rotate(45deg);
