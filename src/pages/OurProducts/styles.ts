@@ -1,35 +1,40 @@
 import styled from "styled-components";
 
 export const OurProductsContainer = styled.div`
-  scrollbar-gutter: stable;
-  section {
-    display: flex;
-    padding-bottom: 5rem;
-    margin-bottom: 5rem;
+  h1 {
+    margin-bottom: 1rem;
   }
-  
-  section:not(:last-child) {
-    border-bottom: 1px solid ${({theme}) => theme.colors["base-button"]};
-  }  
 `
 
 export const ProductsAndFilters = styled.div`
-  display: flex;
-  gap: 3rem;
+  display: grid;
+  grid-template-areas:"A A"
+                      "B C";
 
-  p {
+  > div {
+    grid-area: A;
     display: flex;
-    gap: 1rem;
+    margin-left: auto;
+    margin-bottom: 2rem;
     align-items: center;
-    font-size: 2.6rem;
-    font-weight: 700;
-    margin-bottom: 5rem;
+    gap: 1rem;
+    
+    span {
+      color: ${({ theme }) => theme.colors["green-primary"]};
+      font-weight: 700;
+    }
+    
+    select {
+      padding: 0.4rem 1rem;
+      border: 1px solid ${({theme}) => theme.colors["base-input"]};
+      border-radius: 6px;
+    }
   }
 `
 
 
 
-export const ProductsContainer = styled.div`
+export const ProductsContainer = styled.main`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 1rem;

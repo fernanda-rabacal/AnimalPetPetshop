@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 export const Item = styled(NavLink)`
   background-color: ${({theme}) => theme.colors.white};
-  border: 1px solid ${({theme}) => theme.colors["base-card"]};
+  border: 1px solid ${({theme}) => theme.colors["base-input"]};
   margin: 10px;
   padding: 10px;
   width: 16rem;
