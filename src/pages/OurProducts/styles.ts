@@ -33,7 +33,6 @@ export const ProductsAndFilters = styled.div`
 `
 
 
-
 export const ProductsContainer = styled.main`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
