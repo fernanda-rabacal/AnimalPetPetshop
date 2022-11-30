@@ -1,6 +1,8 @@
-import { FormerTitle } from "../../components/tipography";
-import { ServiceCard, ServicesCards, ServicesContainer } from "./styles";
-import DogShower from '../../assets/cachorro-tomando-banho.png'
+import { FormerTitle, RegularText } from "../../components/tipography";
+import { CardFooter, ServiceCard, ServicesCards, ServicesContainer } from "./styles";
+import DogShower from '../../assets/cachorro-tomando-banho.png';
+import { ArrowRight } from "phosphor-react";
+import { servicesData } from "../../data/servicesData";
 
 export function ServicesPage() {
   return(
@@ -10,42 +12,25 @@ export function ServicesPage() {
       </FormerTitle>
 
       <ServicesCards>
-        <ServiceCard>
-          <img src={DogShower} />
-
-          <div>
-            <p>Cachorro tomando banho</p>
-            <p>Cachorro tomando banho</p>
-            <p>Cachorro tomando banho</p>
-          </div>
-        </ServiceCard>
-        <ServiceCard>
-          <img src={DogShower} />
-
-          <div>
-            <p>Cachorro tomando banho</p>
-            <p>Cachorro tomando banho</p>
-            <p>Cachorro tomando banho</p>
-          </div>
-        </ServiceCard>
-        <ServiceCard>
-          <img src={DogShower} />
-
-          <div>
-            <p>Cachorro tomando banho</p>
-            <p>Cachorro tomando banho</p>
-            <p>Cachorro tomando banho</p>
-          </div>
-        </ServiceCard>
-        <ServiceCard>
-          <img src={DogShower} />
-
-          <div>
-            <p>Cachorro tomando banho</p>
-            <p>Cachorro tomando banho</p>
-            <p>Cachorro tomando banho</p>
-          </div>
-        </ServiceCard>
+        {servicesData.map(service => {
+          return(
+            <ServiceCard>
+              <img src={service.image} />
+            
+              <div>
+                <FormerTitle size="l" color="green-primary">{service.name}</FormerTitle>
+                <RegularText size="l">
+                  {service.description}
+                </RegularText>
+              </div>
+                
+              <CardFooter to="/home">
+                Saiba mais
+                <ArrowRight size={24} />
+              </CardFooter>
+            </ServiceCard>
+          )
+        })}
       </ServicesCards>
     </ServicesContainer>
   )
