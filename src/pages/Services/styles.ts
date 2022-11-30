@@ -7,9 +7,14 @@ export const ServicesCards = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 2rem;
+  column-gap: 2rem;
   margin-top: 3rem;
 
-  @media(min-width: 700px) {
+  @media(min-width: 800px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media(min-width: 1024px) {
     grid-template-columns: repeat(3, 1fr);
   }
 `
