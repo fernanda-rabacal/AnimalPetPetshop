@@ -1,15 +1,15 @@
 import { FormerSubtitle, FormerTitle } from "../../components/tipography";
 import { OurProductsContainer, ProductsAndFilters, ProductsContainer } from "./styles";
 import { ProductCard } from "./components/ProductCard";
-import { useContext, useEffect, useMemo, useState } from "react";
+import { ChangeEvent, useContext, useEffect, useMemo, useState } from "react";
 import { Pagination } from "../../components/Pagination";
 import { FilterOptionsContainer } from "./components/Filter";
 import { CartContext } from "../../contexts/CartContext";
-import { OrderDropDown } from "./components/OrderDropDown";
 
 export function OurProducts(){
   const [currentPage, setCurrentPage] = useState(1);
-  const { checked, filterProductsPerCategory, products } = useContext(CartContext)
+  const [selected, setSelected] = useState("0");
+  const { checked, filterProductsPerCategory, products, orderProducts } = useContext(CartContext)
   const itemsPerPage =  window.innerWidth < 550 ? 10 
   : window.innerWidth < 1024 ? 9 : 15;
   
@@ -20,9 +20,11 @@ export function OurProducts(){
     return products.slice(firstPageIndex, lastPageIndex);
   }, [currentPage, products]);
 
+
   useEffect(() => {
     filterProductsPerCategory(checked)
-  }, [checked])
+    orderProducts(selected)
+  }, [checked, selected])
 
   return(
     <OurProductsContainer className="container">
@@ -32,12 +34,12 @@ export function OurProducts(){
       <ProductsAndFilters>
         <div>
           <span>ORDENAR POR</span>
-          <select defaultValue={0}>
-            <option value={0}>Mais Relevantes</option>
-            <option value={1}>Menor preço</option>
-            <option value={2}>Maior preço</option>
-            <option value={3}>Nome de A-Z</option>
-            <option value={4}>Nome de Z-A</option>
+          <select onChange={(e) => setSelected(e.target.value)}>
+            <option value="0">Mais Relevantes</option>
+            <option value="1">Menor preço</option>
+            <option value="2">Maior preço</option>
+            <option value="3">Nome de A-Z</option>
+            <option value="4">Nome de Z-A</option>
           </select>
         </div>
 

@@ -3,6 +3,7 @@ import { createContext, ReactNode, useEffect, useState } from "react"
 import { productsData } from "../data/productsData";
 import { FilterOptions } from "../pages/OurProducts/components/Filter";
 import { Product } from "../pages/OurProducts/components/ProductCard"
+import { random } from "../utils/random";
 
 interface CartContextProps {
   children: ReactNode
@@ -18,6 +19,7 @@ interface CartContextType {
   cartItemsTotal: number;
   checked: number[];
   products: Product[];
+  orderProducts: (value: string) => void
   handleToggle: (value: number) => void
   cleanCart: () => void;
   addItemToCart: (item: CartItem) => void;
@@ -101,6 +103,29 @@ export function CartContextProvider({children} : CartContextProps){
     setCartItems([])
   }
 
+  function orderProducts(value: string) {
+    let sortedProducts: Product[] = []
+    console.log(value)
+    
+    if(value === "0") {
+      sortedProducts = productsData
+    }
+    if(value === "1") {
+      sortedProducts = [...products].sort((a, b) => a.price < b.price ? -1 : a.price > b.price ? 1 : 0)
+    }
+    if(value === "2") {
+      sortedProducts = [...products].sort((a, b) => a.price > b.price ? -1 : a.price < b.price ? 1 : 0)
+    }
+    if(value === "3") {
+      sortedProducts = [...products].sort((a, b) => a.name < b.name ? -1 : a.name > b.name ? 1 : 0)
+    }
+    if(value === "4") {
+      sortedProducts = [...products].sort((a, b) => a.name > b.name ? -1 : a.name < b.name ? 1 : 0)
+    }
+    
+    setProducts(sortedProducts)
+  }
+
   function filterProductsPerCategory(checked: number[]) {
     let newProducts = []
 
@@ -170,6 +195,7 @@ export function CartContextProvider({children} : CartContextProps){
 
   return(
     <CartContext.Provider value={{
+      orderProducts,
       products,
       filterProductsPerCategory,
       checked,
