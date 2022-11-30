@@ -11,7 +11,8 @@ export function OurProducts(){
   const [selected, setSelected] = useState("0");
   const { checked, filterProductsPerCategory, products, orderProducts } = useContext(CartContext)
   const itemsPerPage =  window.innerWidth < 550 ? 10 
-  : window.innerWidth < 1024 ? 9 : 15;
+  : window.innerWidth < 900 ? 12 
+  : window.innerWidth < 1244 ? 9 : 15;
   
   const currentTableData = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * itemsPerPage;
@@ -23,8 +24,11 @@ export function OurProducts(){
 
   useEffect(() => {
     filterProductsPerCategory(checked)
+  }, [checked])
+
+  useEffect(() => {
     orderProducts(selected)
-  }, [checked, selected])
+  }, [selected])
 
   return(
     <OurProductsContainer className="container">
