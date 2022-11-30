@@ -1,4 +1,4 @@
-import { Funnel } from "phosphor-react";
+import { DotsThreeOutline, Funnel } from "phosphor-react";
 import { useContext, useState } from "react";
 import { FormerTitle } from "../../../../components/tipography";
 import { CartContext } from "../../../../contexts/CartContext";
@@ -50,57 +50,64 @@ const priceCheckbox = [
 
 export function FilterOptionsContainer() {
   const { handleToggle } = useContext(CartContext)
+  const [isActive, setIsActive] = useState(false)
+  const size = window.innerWidth < 700 ? 22 : 28
 
   return(
     <FilterContainer>
-      <p>
-        <Funnel size={28} weight="fill"/>
-        Filtros
-      </p>
-
-    <div>
-      <FormerTitle>
-        Por categorias
-      </FormerTitle>
-
-        {categoryCheckbox.map(checkbox => {
-          return(
-            <FilterOption key={checkbox.value}>
-              <label htmlFor={checkbox.name}>
-                <input
-                  type="checkbox"
-                  value={checkbox.value}
-                  onChange={(e) => handleToggle(Number(e.target.value))}
-                  />
-                <span className="checkmark"></span>
-                {checkbox.name}
-              </label>
-            </FilterOption>
-          )
-        })}
-    </div>
-
-    <div>
-      <FormerTitle>
-        Por preço
-      </FormerTitle>
-
-      {priceCheckbox.map(checkbox => {
-          return(
-            <FilterOption key={checkbox.value}>
-              <label htmlFor={checkbox.name}>
-                <input
-                  type="checkbox"
-                  value={checkbox.value}
-                  onChange={(e) => handleToggle(Number(e.target.value))}
-                  />
-                <span className="checkmark"></span>
-                {checkbox.name}
-              </label>
-            </FilterOption>
-          )
-        })}
+      <div>
+        <p>
+          <Funnel size={size} weight="fill"/>
+          Filtros
+        </p>
+        <button onClick={() => setIsActive(!isActive)}>
+          <DotsThreeOutline size={size} weight="fill" />
+        </button>
       </div>
+
+      <nav className={isActive ? "active" : "inactive"}>
+        <FormerTitle>
+          Por categorias
+        </FormerTitle>
+          <ul>
+            {categoryCheckbox.map(checkbox => {
+              return(
+                <FilterOption key={checkbox.value}>
+                  <label htmlFor={checkbox.name}>
+                    <input
+                      type="checkbox"
+                      value={checkbox.value}
+                      onChange={(e) => handleToggle(Number(e.target.value))}
+                      />
+                    <span className="checkmark"></span>
+                    {checkbox.name}
+                  </label>
+                </FilterOption>
+              )
+            })}
+          </ul>
+
+          <FormerTitle>
+            Por preço
+          </FormerTitle>
+          <ul>
+            {priceCheckbox.map(checkbox => {
+              return(
+                <FilterOption key={checkbox.value}>
+                  <label htmlFor={checkbox.name}>
+                    <input
+                      type="checkbox"
+                      value={checkbox.value}
+                      onChange={(e) => handleToggle(Number(e.target.value))}
+                      />
+                    <span className="checkmark"></span>
+                    {checkbox.name}
+                  </label>
+                </FilterOption>
+              )
+            })}
+        </ul>
+      </nav>
     </FilterContainer>
   )
 }
