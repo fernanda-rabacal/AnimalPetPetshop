@@ -8,7 +8,7 @@ import { FormerTitle } from "../tipography";
 import { ArrowLeft, ArrowRight } from "phosphor-react";
 
 export function InfinityCarousel(){
-  const [slide, setSlide] = useState<Slider>()
+  const [slide, setSlide] = useState<Slider | null>()
   
   function RightButton() {
     return(
