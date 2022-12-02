@@ -39,8 +39,9 @@ export const ContactContainer = styled.section`
     border: 0;
     border-radius: 2rem;
     
-    width: 45rem;
-    height: 35rem;
+    width: 42rem;
+    height: 32rem;
+    margin-inline: 2rem;
   }
 
   @media(min-width: 1024px) {

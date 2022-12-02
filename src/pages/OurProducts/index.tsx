@@ -32,7 +32,7 @@ export function OurProducts(){
 
   return(
     <OurProductsContainer className="container">
-      <FormerTitle size="l" color="green-primary">
+      <FormerTitle size="l">
         Seleção dos melhores produtos
       </FormerTitle>
       <ProductsAndFilters>
@@ -50,20 +50,21 @@ export function OurProducts(){
         <FilterOptionsContainer />
 
         <ProductsContainer>
-          {currentTableData.map(product => {
-            return(
-              <ProductCard key={product.id} product={product} />
-            )
-          })}        
+          <div className="products-grid">
+            {currentTableData.map(product => {
+              return(
+                <ProductCard key={product.id} product={product} />
+              )
+            })}        
+          </div>
+          <Pagination
+            currentPage={currentPage}
+            totalItems={products.length}
+            itemsPerPage={itemsPerPage}
+            onPageChange={page => setCurrentPage(page)}
+          />
         </ProductsContainer>
       </ProductsAndFilters>
-
-      <Pagination
-        currentPage={currentPage}
-        totalItems={products.length}
-        itemsPerPage={itemsPerPage}
-        onPageChange={page => setCurrentPage(page)}
-      />
     </OurProductsContainer>
   )
 }

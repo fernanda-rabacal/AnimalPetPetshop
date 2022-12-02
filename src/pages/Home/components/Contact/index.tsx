@@ -1,4 +1,4 @@
-import { At, MapPin, WhatsappLogo } from "phosphor-react";
+import { At, Calendar, InstagramLogo, MapPin, Phone, WhatsappLogo } from "phosphor-react";
 import { ButtonContainer } from "../Intro/styles";
 import { ContactContainer } from "./styles";
 
@@ -19,6 +19,14 @@ export function Contact() {
             <li>  
               <At size={24} weight="bold" color={"#00856F"}/> 
               animalpett@outlook.com
+            </li>
+            <li>  
+              <Phone size={24} weight="fill" color={"#00856F"}/> 
+              (71) 3017-5890
+            </li>
+            <li>  
+              <InstagramLogo size={24} weight="bold" color={"#00856F"}/> 
+              animalpetsalvador
             </li>
           </ul>
           <a className="button" href="https://wa.me/5571993172074" target="_blank" >

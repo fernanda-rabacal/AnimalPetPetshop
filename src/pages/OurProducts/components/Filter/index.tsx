@@ -61,7 +61,7 @@ export function FilterOptionsContainer() {
           Filtros
         </p>
         <button onClick={() => setIsActive(!isActive)}>
-          <DotsThreeOutline size={size} weight="fill" />
+          <DotsThreeOutline size={22} weight="fill" />
         </button>
       </div>
 

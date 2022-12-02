@@ -2,7 +2,6 @@ import styled, {css} from "styled-components";
 
 export const PaginationContainer = styled.ul`
   margin-top: 2rem;
-  padding-left: 40rem;
   display: flex;
   list-style-type: none;
   width: 100%;
