@@ -1,5 +1,5 @@
 import Slider from "react-slick"
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 import { photosData } from "../../data/photosData"
 import { ICarouselContainer, SlideItem } from "./styles"
 import "slick-carousel/slick/slick.css"; 
@@ -7,15 +7,12 @@ import "slick-carousel/slick/slick-theme.css";
 import { FormerTitle } from "../tipography";
 import { ArrowLeft, ArrowRight } from "phosphor-react";
 
-
-
-
 export function InfinityCarousel(){
-  const slider = useRef<Slider | null>(null)
+  const [slide, setSlide] = useState<Slider>()
   
   function RightButton() {
     return(
-      <button onClick={() => slider!.current.slickNext()}>
+      <button onClick={() => slide!.slickNext()}>
         <div>
           <ArrowRight size={28} />
         </div>
@@ -25,7 +22,7 @@ export function InfinityCarousel(){
 
   function LeftButton() {
     return(
-      <button onClick={() => slider!.current.slickPrev()}>
+      <button onClick={() => slide!.slickPrev()}>
         <div>
           <ArrowLeft size={28} />
         </div>
@@ -75,7 +72,7 @@ export function InfinityCarousel(){
 
 
     const interval = setInterval(() => {
-      slider!.current.slickNext()
+      slide!.slickNext()
     }, 5000)
 
     return () => clearInterval(interval)
@@ -85,7 +82,7 @@ export function InfinityCarousel(){
     <ICarouselContainer className="container">
       <FormerTitle>Nossos clientes pets maravilhosos</FormerTitle>
       <div>
-        <Slider ref={slider} {...settings}>
+        <Slider ref={slider => setSlide(slider)} {...settings}>
           {photosData.map(photo => {
             return(
               <SlideItem>
