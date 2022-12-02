@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 export const FilterContainer = styled.aside`
   grid-area: A;
+  width: 30%;
   display: flex;
   flex-direction: column;
 
@@ -27,7 +28,6 @@ export const FilterContainer = styled.aside`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 25%;
     margin-bottom: 2rem;
     border-bottom: 1px solid transparent;
 
