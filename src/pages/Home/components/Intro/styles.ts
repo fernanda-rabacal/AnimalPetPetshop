@@ -106,7 +106,7 @@ export const Stats = styled.section`
   padding-inline: 4rem;
   
   margin-inline: auto; 
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   
   background-color: ${({theme}) => theme.colors['brand-beige']};
   border: 1px solid ${({theme}) => theme.colors['brand-greenlight']};
