@@ -1,30 +1,31 @@
 import Slider from "react-slick"
-import { useEffect, useState } from "react"
+import { CSSProperties, HTMLAttributes, useEffect, useRef, useState } from "react"
 import { photosData } from "../../data/photosData"
 import { ICarouselContainer, SlideItem } from "./styles"
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import { FormerTitle } from "../tipography";
-import { ArrowLeft, ArrowRight } from "phosphor-react";
+import { ArrowLeft, ArrowRight, CaretLeft, CaretRight } from "phosphor-react";
+
 
 export function InfinityCarousel(){
-  const [slide, setSlide] = useState<Slider | null>()
+  const slider = useRef<Slider | null>(null)
   
-  function RightButton() {
+  function RightButton({ className, onClick, style} : HTMLAttributes<HTMLButtonElement>) {
     return(
-      <button onClick={() => slide!.slickNext()}>
-        <div>
-          <ArrowRight size={28} />
+      <button className={`${className} arrow-button`} style={{...style,  marginRight: "1rem"}} onClick={onClick}>
+        <div >
+          <CaretRight size={20} weight="bold" />
         </div>
       </button>
     )
   }
 
-  function LeftButton() {
+  function LeftButton({ className, style, onClick } : HTMLAttributes<HTMLButtonElement>) {
     return(
-      <button onClick={() => slide!.slickPrev()}>
+      <button className={`${className} arrow-button`} style={{...style, marginLeft: "1rem"}} onClick={onClick}>
         <div>
-          <ArrowLeft size={28} />
+          <CaretLeft size={20} weight="bold" />
         </div>
       </button>
     )
@@ -33,15 +34,14 @@ export function InfinityCarousel(){
   const settings = {
     dots: true,
     infinite: true,
-    arrows: true,
     speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 3,
     initialSlide: 0,
     pauseOnHover: true,
-    swipeToSlide: true,/* 
+    swipeToSlide: true,
     nextArrow: <RightButton />,
-    prevArrow: <LeftButton />, */
+    prevArrow: <LeftButton />,
     responsive: [
       {
         breakpoint: 1024,
@@ -69,10 +69,8 @@ export function InfinityCarousel(){
   };
   
   useEffect(() => {
-
-
     const interval = setInterval(() => {
-      slide!.slickNext()
+      slider?.current?.slickNext()
     }, 5000)
 
     return () => clearInterval(interval)
@@ -82,7 +80,7 @@ export function InfinityCarousel(){
     <ICarouselContainer className="container">
       <FormerTitle>Nossos clientes pets maravilhosos</FormerTitle>
       <div>
-        <Slider ref={slider => setSlide(slider)} {...settings}>
+        <Slider ref={slider} {...settings}>
           {photosData.map(photo => {
             return(
               <SlideItem>
