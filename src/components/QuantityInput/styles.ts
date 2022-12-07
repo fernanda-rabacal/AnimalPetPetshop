@@ -46,11 +46,8 @@ export const IconWrapper = styled.button.attrs({
   justify-content: center;
   width: 1.85rem;
   height: 1.85rem;
-  border: none;
-  background: none;
   color: ${({ theme }) => theme.colors["green-primary"]};
   transition: 0.4s;
-  cursor: pointer;
 
   &:disabled {
     opacity: 0.4;
@@ -58,5 +55,4 @@ export const IconWrapper = styled.button.attrs({
   &:not(:disabled):hover {
     color: ${({ theme }) => theme.colors["green-primary-dark"]};
   }
-
 `;

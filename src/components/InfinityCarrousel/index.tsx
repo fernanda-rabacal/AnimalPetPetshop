@@ -1,14 +1,19 @@
 import Slider from "react-slick"
-import { CSSProperties, HTMLAttributes, useEffect, useRef, useState } from "react"
-import { photosData } from "../../data/photosData"
+import { HTMLAttributes, useEffect, useRef, useState } from "react"
 import { ICarouselContainer, SlideItem } from "./styles"
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import { FormerTitle } from "../tipography";
-import { ArrowLeft, ArrowRight, CaretLeft, CaretRight } from "phosphor-react";
+import { CaretLeft, CaretRight } from "phosphor-react";
+
+interface ISliderData {
+  data: { 
+    src: string 
+  }[]
+}
 
 
-export function InfinityCarousel(){
+export function InfinityCarousel({data} : ISliderData){
   const slider = useRef<Slider | null>(null)
   
   function RightButton({ className, onClick, style} : HTMLAttributes<HTMLButtonElement>) {
@@ -62,7 +67,7 @@ export function InfinityCarousel(){
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows: false,
+          dots: false,
         },
       },
     ],
@@ -78,10 +83,9 @@ export function InfinityCarousel(){
 
   return(
     <ICarouselContainer className="container">
-      <FormerTitle>Nossos clientes pets maravilhosos</FormerTitle>
       <div>
         <Slider ref={slider} {...settings}>
-          {photosData.map(photo => {
+          {data.map(photo => {
             return(
               <SlideItem>
                 <img src={`/instagramPics/${photo.src}`} />

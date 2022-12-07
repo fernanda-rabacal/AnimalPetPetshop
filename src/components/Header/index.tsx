@@ -1,8 +1,8 @@
-import { MapPin, ShoppingCart } from "phosphor-react"
+import { ShoppingCartSimple, User } from "phosphor-react"
 import { useContext } from "react"
 import { NavLink } from "react-router-dom"
 import { CartContext } from "../../contexts/CartContext"
-import { CartWrapper, HeaderButtonsContainer, HeaderContainer, PagesNavigators } from "./styles"
+import { CartWrapper, HeaderButtonsContainer, HeaderContainer, LoginDialog, LoginWrapper, PagesNavigators } from "./styles"
 
 
 export function Header(){
@@ -16,7 +16,7 @@ export function Header(){
         
       <PagesNavigators>
         <NavLink to="/home">
-         <p>Home</p> 
+         <p>Início</p> 
         </NavLink>
         <NavLink to="/about">
           <p>Sobre</p>
@@ -30,17 +30,24 @@ export function Header(){
       </PagesNavigators>
 
       <HeaderButtonsContainer>
+          <LoginWrapper>
+            <User size={32} weight="bold" />
+              <p>Entrar</p>
+          </LoginWrapper>
+          <LoginDialog className="dialog active"> 
+            <NavLink to="/login" >
+              <button>
+                Entrar
+              </button>
+            </NavLink>
+            <p>Não tem cadastro? <NavLink to="/register">Criar conta</NavLink></p>
+          </LoginDialog>
         <CartWrapper>
-          <MapPin size={20} weight="fill" />
-            Salvador, BA
-        </CartWrapper>
-        <CartWrapper>
-        {cartQuantity >= 1 && <span>{cartQuantity}</span>}
+          {cartQuantity >= 1 && <span>{cartQuantity}</span>}
           <NavLink to="/complete-order">
-          <ShoppingCart size={32} weight="fill" />
+            <ShoppingCartSimple size={32} weight="bold" />
           </NavLink>
         </CartWrapper>
-
       </HeaderButtonsContainer>
     </HeaderContainer>
   )

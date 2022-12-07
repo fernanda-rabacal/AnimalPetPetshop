@@ -1,4 +1,5 @@
-import { At, Calendar, InstagramLogo, MapPin, Phone, WhatsappLogo } from "phosphor-react";
+import { At, InstagramLogo, MapPin, Phone, WhatsappLogo } from "phosphor-react";
+import { FormerTitle } from "../../../../components/tipography";
 import { ButtonContainer } from "../Intro/styles";
 import { ContactContainer } from "./styles";
 
@@ -7,7 +8,7 @@ export function Contact() {
     <ContactContainer className="container">
       <div>
         <header>
-          <h2>Entre em contato com a gente!</h2>
+          <FormerTitle size="s">Entre em contato com a gente!</FormerTitle>
         </header>
         <div className="content">
           <ul>

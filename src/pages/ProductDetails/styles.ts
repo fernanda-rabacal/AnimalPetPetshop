@@ -7,15 +7,12 @@ export const ProductDetailsContainer = styled.div`
   color: ${({ theme }) => theme.colors.paragraph};
 
   > button {
-    border: none;
-    background: transparent;
     align-self: flex-start;
     color: ${({ theme }) => theme.colors["green-primary"]};
     border-bottom: 1px solid transparent;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    cursor: pointer;
     font-weight: bold;
 
     &:hover {

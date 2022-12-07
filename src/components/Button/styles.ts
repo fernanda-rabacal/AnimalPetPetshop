@@ -13,13 +13,11 @@ export const ButtonContainer = styled.button<ButtonProps>`
   font-weight: 700;
   background: ${({ theme }) => theme.colors["green-primary"]};
   font-size: ${({ theme }) => theme.textSizes["components-button-g"]};
-  border: none;
   border-radius: 6px;
   margin-top: 1.5rem;
   text-transform: uppercase;
   transition: 0.4s;
   line-height: 1.3rem;
-  cursor: pointer;
 
   &:disabled {
     opacity: 0.7;

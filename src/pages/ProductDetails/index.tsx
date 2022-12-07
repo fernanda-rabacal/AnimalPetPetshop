@@ -8,7 +8,7 @@ import { CartContext } from "../../contexts/CartContext"
 import { formatMoney } from "../../utils/formatMoney"
 import { random } from "../../utils/random"
 import { Error } from "../Error"
-import { CarrouselContainer } from "../OurProducts/components/Carrousel"
+import { CarrouselContainer } from "../../components/Carrousel"
 import { AddToCart, Description, Infos, ProductDetailsContainer, ProductInformations } from "./styles"
 
 export function ProductDetails() {

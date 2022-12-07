@@ -90,7 +90,6 @@ export const RemoveButton = styled.button`
   gap: 0.25rem;
   color: ${({ theme }) => theme.colors["base-text"]};
   height: 3rem;
-  border: none;
   background: ${({ theme }) => theme.colors["base-button"]};
   padding: 0 0.5rem;
   border-radius: 6px;
