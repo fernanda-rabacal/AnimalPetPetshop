@@ -9,6 +9,7 @@ export const defaultTheme = {
     'green-primary-dark': "#00471e",
     'bg-light': '#f0fef8', 
     'brand-greenlight': '#c9fddf',
+    'bg-green-light': '#ebfff3',
     'bg-dark': '#00471e',
     "base-blue" : '#0006C1', 
     "base-button": "#D1D1D1",

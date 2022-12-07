@@ -1,5 +1,6 @@
-import { InfinityCarousel } from "../../../../components/InfinityCarrousel/Carousel";
+import { InfinityCarousel } from "../../../../components/InfinityCarrousel";
 import { FormerTitle } from "../../../../components/tipography";
+import { photosData } from "../../../../data/photosData";
 import { productsTypeData } from "../../../../data/products/productsTypeData";
 import { PhotosAndProductsContainer, ProductsDisplay, ProductsDisplayItem } from "./styles";
 
@@ -11,14 +12,19 @@ export function PhotoSection(){
         {productsTypeData.map(item => {
           return(
             <ProductsDisplayItem key={item.id}>
-              <img src={item.image}/>
+              <div>
+                <img src={item.image}/>
+              </div>
               <p>{item.name}</p>
             </ProductsDisplayItem>
           )
         })}
       </ProductsDisplay>
 
-      <InfinityCarousel />
+      <div>
+        <FormerTitle size="l">Nossos clientes pets</FormerTitle>
+        <InfinityCarousel data={photosData}/>
+      </div>
     </PhotosAndProductsContainer>
   )
 }

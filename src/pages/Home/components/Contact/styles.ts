@@ -9,28 +9,16 @@ export const ContactContainer = styled.section`
 
   header {
     margin-bottom: 3.2rem;
-    
-    h2 {
-      font-size: 3rem;
-      line-height:3.9rem;
-  
-      color: ${({ theme }) => theme.colors.headline};
-      margin-bottom: 6rem;
-    }
   }
 
-
   ul {
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
     margin-bottom: 3.2rem;
     
     li {
       display: flex;
       gap: 0.8rem;
       font-size: 2rem;
-      margin-bottom: 1.2rem;
+      margin-bottom: 3rem;
       color: ${({ theme }) => theme.colors.paragraph};
     }
   }
@@ -39,9 +27,9 @@ export const ContactContainer = styled.section`
     border: 0;
     border-radius: 2rem;
     
-    width: 42rem;
+    width: 100%;
     height: 32rem;
-    margin-inline: 2rem;
+    margin-inline: auto;
   }
 
   @media(min-width: 1024px) {

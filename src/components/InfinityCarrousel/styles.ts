@@ -1,14 +1,6 @@
 import styled from "styled-components";
 
 export const ICarouselContainer = styled.div`
-  margin-bottom: 15rem;
-
-  h1 {
-    text-align: center;
-    margin-bottom: 5rem;
-    font-size: 3rem;
-  }
-
   .slick-next::before, .slick-prev::before {
     display: none;
   }

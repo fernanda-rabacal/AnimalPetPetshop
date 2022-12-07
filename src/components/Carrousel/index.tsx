@@ -1,7 +1,7 @@
 import { MouseEvent, useRef } from "react";
-import { Carrousel, CarrouselContainerStyled, ScrollLeft, ScrollRight } from "./styles";
-import { Product, ProductCard } from "../ProductCard";
-import Chevron from "../../../../assets/right_chevron.png"
+import { Carrousel, CarrouselContainerStyled, ScrollButton } from "./styles";
+import { Product, ProductCard } from "../../pages/OurProducts/components/ProductCard";
+import { CaretLeft, CaretRight } from "phosphor-react";
 
 interface CarrouselProps {
   productArray: Product[]
@@ -28,9 +28,11 @@ export function CarrouselContainer({productArray} : CarrouselProps) {
 
   return(
     <CarrouselContainerStyled>
-      <ScrollLeft onClick={(e) => handleLeftClick(e)}>
-        <img src={Chevron} alt="Scroll Left" />
-      </ScrollLeft>
+      <ScrollButton onClick={(e) => handleLeftClick(e)}>
+        <div>
+          <CaretLeft size={20} weight="bold" />
+        </div>
+      </ScrollButton>
       <Carrousel ref={carrousel}>
 
         {productArray.map((product) => {
@@ -42,9 +44,11 @@ export function CarrouselContainer({productArray} : CarrouselProps) {
           )})}
 
       </Carrousel>
-      <ScrollRight onClick={(e) => handleRightClick(e)}>
-        <img src={Chevron} alt="Scroll Right" />
-      </ScrollRight>
+      <ScrollButton onClick={(e) => handleRightClick(e)}>
+        <div>
+          <CaretRight size={20} weight="bold" />
+        </div>
+      </ScrollButton>
     </CarrouselContainerStyled>
   )
 }

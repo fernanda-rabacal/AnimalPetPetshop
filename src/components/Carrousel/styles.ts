@@ -11,29 +11,28 @@ export const Carrousel = styled.div`
   overflow: hidden;
 `
 
-export const ScrollRight = styled.button`
+export const ScrollButton = styled.button`
   width: 40rem;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
   display: flex;
   align-items: center;
-
-  img {
-    width: 100%;
+  
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
     background: ${({ theme }) => theme.colors.white};
     border-radius: 9999px;
-    border: 1px solid ${({theme}) => theme.colors["base-card"]};
+    border: 1px solid ${({theme}) => theme.colors["base-hover"]};
+    color: ${({theme}) => theme.colors["green-primary"]};
+    transition: 0.2s;
+
+    &:hover {
+      box-shadow: 0 0 2px gray;
+    }
   }
 
   @media(min-width: 800px) {
     width: 20rem;
   }
 `
-
-export const ScrollLeft = styled(ScrollRight)`
-    img {
-      transform: rotate(180deg);
-    }
-`
-

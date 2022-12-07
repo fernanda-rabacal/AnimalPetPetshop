@@ -52,7 +52,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Roboto", sans-serif;
   }
 
-  a{
+  a {
     text-decoration: none;
   }
 
