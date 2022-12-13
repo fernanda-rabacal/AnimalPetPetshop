@@ -14,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background-color: ${({theme}) => theme.colors["brand-beige"]};
   }
-
+  
   .container {  
     margin-block: 4rem;
     padding-inline: 2rem;
