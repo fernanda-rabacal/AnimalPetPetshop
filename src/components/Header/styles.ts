@@ -97,8 +97,8 @@ export const LoginWrapper = styled.div`
 
   svg {
     color: ${({theme}) => theme.colors["green-primary"]};
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
   
   @media(min-width: 700px) {
@@ -192,7 +192,6 @@ export const LoginDialog = styled.span`
 export const CartWrapper = styled(LoginWrapper)`
   padding: 0.5rem;
   background: transparent;
-  margin-inline: 3rem;
 
   span {
     transition: 0.2s;
