@@ -8,12 +8,7 @@ import { useEffect } from "react";
 import { useTheme } from "styled-components";
 
 export function LoginPage() {
-  const { colors } = useTheme();
-
-  useEffect(() => {
-    document.body.style.backgroundColor = colors["brand-greenlight"];
-  }, [])
-
+ 
   return(
     <div className="container">
       <FormerTitle size="l">Acesse sua conta</FormerTitle>
