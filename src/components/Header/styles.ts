@@ -102,6 +102,7 @@ export const LoginWrapper = styled.div`
   }
   
   @media(min-width: 700px) {
+    margin-inline: 1rem;
     p {
     font-size: 1.6rem;
   }
