@@ -10,6 +10,7 @@ import { useTheme } from "styled-components";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { post } from "../../axios/requsicoes";
 
 interface ILogin {
   email: string;
@@ -21,7 +22,7 @@ export function LoginPage() {
   const { register, handleSubmit } = useForm()
   const { colors } = useTheme()
 
-  const toastError = {
+  const toastProps = {
     position: toast.POSITION.TOP_RIGHT,
     autoClose: 3000,
     hideProgressBar: false,
@@ -31,11 +32,25 @@ export function LoginPage() {
     progress: undefined
     };
 
-  function login(data) {
+  async function login(data) {
     if (!data.email || !data.password) {
-			toast.error('Email e senha são obrigatórios.', toastError);
+			toast.error('Email e senha são obrigatórios.', toastProps);
 			return;
 		}
+
+    try {
+      const response = await post("login", data);
+      const responseData = await response.json();
+
+      if (!response.ok) {
+				toast.error(responseData, toastProps);
+				return;
+			}
+
+      return toast.success(`Sucesso no login, ${responseData.name}`)
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   const handleClickShowPassword = () => {
