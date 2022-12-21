@@ -4,7 +4,7 @@ import { CompleteOrderContainer } from "./styles";
 import * as zod from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, FormProvider } from "react-hook-form";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
 

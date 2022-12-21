@@ -6,7 +6,7 @@ export const LoginContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 12rem;
-  margin-top: 1rem;
+  margin-top: 5rem;
 
   @media(min-width: 700px) {
     flex-direction: row;
@@ -16,8 +16,8 @@ export const LoginContainer = styled.div`
 export const FormContainer = styled.div`
   width: 100%;
   max-width: 40rem;
-  height: 34rem;
-  padding: 2rem;
+  margin-top: 1.5rem;
+  padding: 2rem 3rem;
   border-radius: 10px;
   background: ${({ theme }) => theme.colors["base-card"]};
   border: 1px solid  ${({ theme }) => theme.colors["base-hover"]};
@@ -40,15 +40,18 @@ export const FormContainer = styled.div`
 `
 
 export const LoginForm = styled.form`
-> label {
-  color: ${({theme}) => theme.colors.headline};
-  font-weight: 700;
-  
-  div {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 5px;
+  > div {
+    position: relative;
+    margin-top: 1.5rem;
+
+    label {
+      color: ${({theme}) => theme.colors.headline};
+      font-weight: 700;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
 
     a {
       font-size: 1.2rem;
@@ -56,18 +59,15 @@ export const LoginForm = styled.form`
       border-bottom: 1px solid ${({theme}) => theme.colors["base-blue-light"]};
     }
     
-    p {
-      font-size: 1.4rem;
-      margin-top: 1.5rem;
-    }
+     svg {
+      position: absolute;
+      top: 50%;
+      right: 4%;
+      cursor: pointer;
+     }
    }
    
-   input {
-      width: 30rem;
-    }
-  }
-
-  button {
+  button, input {
     width: 30rem;
   }
 `
@@ -85,7 +85,7 @@ export const InfosContainer = styled.div`
 
 
   img {
-    width: 22rem;
+    width: 24rem;
     margin-inline: auto;
   }
 `
