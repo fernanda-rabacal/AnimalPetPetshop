@@ -19,7 +19,7 @@ interface ILogin {
 
 export function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
-  const { register, handleSubmit } = useForm()
+  const { register, handleSubmit } = useForm<ILogin>()
   const { colors } = useTheme()
 
   const toastProps = {
@@ -32,7 +32,7 @@ export function LoginPage() {
     progress: undefined
     };
 
-  async function login(data) {
+  async function login(data: ILogin) {
     if (!data.email || !data.password) {
 			toast.error('Email e senha são obrigatórios.', toastProps);
 			return;

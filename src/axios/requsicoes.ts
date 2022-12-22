@@ -4,7 +4,7 @@ interface IReq {
 }
 
 export async function post(resource: string, data: IReq ) {
-	const response = await fetch(`http://localhost:3000/${resource}`, {
+	const response = await fetch(`http://localhost:3001/${resource}`, {
 		method: "POST",
 		body: JSON.stringify(data),
 		headers: {
